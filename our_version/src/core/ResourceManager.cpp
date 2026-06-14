@@ -31,18 +31,23 @@ void ResourceManager::preloadAll() {
     
     // Backgrounds
     loadTexture("bg_menu", "Data/Images/menu.jpg");
-    loadTexture("bg_lvl1", "Data/Images/lvl1.png");
-    loadTexture("bg_lvl2", "Data/Images/lvl2.png");
-    loadTexture("bg_lvl3", "Data/Images/lvl3.png");
+    loadTexture("bg_lvl1", "Data/object/level1.png");
+    loadTexture("bg_lvl2", "Data/object/level2.png");
+    loadTexture("bg_lvl3", "Data/object/level3.png");
     
     // Birds
-    loadTexture("bird_basic", "Data/Images/kenney_animalpackredux/PNG/Round (outline)/parrot.png");
-    loadTexture("bird_dash", "Data/Images/kenney_animalpackredux/PNG/Round (outline)/duck.png");
-    loadTexture("bird_explosive", "Data/Images/kenney_animalpackredux/PNG/Round (outline)/chick.png");
-    loadTexture("bird_split", "Data/Images/kenney_animalpackredux/PNG/Round (outline)/owl.png");
+    loadTexture("bird_basic", "Data/object/red.png");
+    loadTexture("bird_dash", "Data/object/yellow.png");
+    loadTexture("bird_explosive", "Data/object/black.png");
+    loadTexture("bird_split", "Data/object/blue.png");
     
     // Pig
-    loadTexture("pig", "Data/Images/kenney_animalpackredux/PNG/Round (outline)/pig.png");
+    loadTexture("pig", "Data/object/pig.png");
+    
+    // UI Level Buttons
+    loadTexture("btn_level1", "Data/object/level1.png");
+    loadTexture("btn_level2", "Data/object/level2.png");
+    loadTexture("btn_level3", "Data/object/level3.png");
     
     // Slingshot
     loadTexture("slingshot", "Data/Images/slingshot.png");

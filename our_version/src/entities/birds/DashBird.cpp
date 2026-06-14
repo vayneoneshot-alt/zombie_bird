@@ -7,9 +7,11 @@ DashBird::DashBird(sf::Vector2f pos) : Bird(pos, 10.0f) {
     
     sf::FloatRect bounds = sprite.getLocalBounds();
     sprite.setOrigin(bounds.width / 2.0f, bounds.height / 2.0f);
-    sprite.setScale(0.2f, 0.2f);
     
-    radius = (bounds.width / 2.0f) * 0.2f;
+    // Auto scale to radius 20.0f
+    float targetRadius = 20.0f;
+    sprite.setScale(targetRadius * 2.0f / bounds.width, targetRadius * 2.0f / bounds.height);
+    radius = targetRadius;
 }
 
 void DashBird::onAbility() {

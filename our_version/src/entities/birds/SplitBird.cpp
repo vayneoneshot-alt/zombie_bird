@@ -7,9 +7,11 @@ SplitBird::SplitBird(sf::Vector2f pos) : Bird(pos, 10.0f) {
     
     sf::FloatRect bounds = sprite.getLocalBounds();
     sprite.setOrigin(bounds.width / 2.0f, bounds.height / 2.0f);
-    sprite.setScale(0.2f, 0.2f);
     
-    radius = (bounds.width / 2.0f) * 0.2f;
+    // Auto scale to radius 20.0f
+    float targetRadius = 20.0f;
+    sprite.setScale(targetRadius * 2.0f / bounds.width, targetRadius * 2.0f / bounds.height);
+    radius = targetRadius;
 }
 
 void SplitBird::onAbility() {
@@ -19,8 +21,8 @@ void SplitBird::onAbility() {
     }
 }
 
-std::vector<std::unique_ptr<BasicBird>> SplitBird::spawnChildren() {
-    std::vector<std::unique_ptr<BasicBird>> children;
+std::vector<std::unique_ptr<SplitBird>> SplitBird::spawnChildren() {
+    std::vector<std::unique_ptr<SplitBird>> children;
     
     if (split_triggered) {
         split_triggered = false; // Only spawn once
@@ -31,7 +33,11 @@ std::vector<std::unique_ptr<BasicBird>> SplitBird::spawnChildren() {
             
             // Spawn 2 children at +/- 20 degrees (0.35 radians)
             for (float offset : {-0.35f, 0.35f}) {
-                auto child = std::make_unique<BasicBird>(body.position);
+                auto child = std::make_unique<SplitBird>(body.position);
+                // Prevent children from splitting again
+                child->abilityUsed = true;
+                child->split_triggered = false;
+                
                 sf::Vector2f newVel(
                     std::cos(angle + offset) * speed,
                     std::sin(angle + offset) * speed

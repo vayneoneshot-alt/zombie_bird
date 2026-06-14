@@ -1,13 +1,32 @@
 #include "CollisionSystem.h"
 #include <cmath>
 #include <algorithm>
+#include <limits>
+
+// Helper math
+inline sf::Vector2f rotateVec(sf::Vector2f v, float angle) {
+    float c = std::cos(angle);
+    float s = std::sin(angle);
+    return sf::Vector2f(v.x * c - v.y * s, v.x * s + v.y * c);
+}
+
+inline float dotProduct(sf::Vector2f a, sf::Vector2f b) {
+    return a.x * b.x + a.y * b.y;
+}
+
+inline float crossProduct(sf::Vector2f a, sf::Vector2f b) {
+    return a.x * b.y - a.y * b.x;
+}
+
+inline sf::Vector2f crossProduct(float a, sf::Vector2f v) {
+    return sf::Vector2f(-a * v.y, a * v.x);
+}
 
 CollisionManifold CollisionSystem::circleVsCircle(const PhysicsBody& a, float radiusA, 
                                                   const PhysicsBody& b, float radiusB) {
     CollisionManifold m;
-    
     sf::Vector2f n = b.position - a.position;
-    float distSq = n.x * n.x + n.y * n.y;
+    float distSq = dotProduct(n, n);
     float radiusSum = radiusA + radiusB;
     
     if (distSq >= radiusSum * radiusSum || distSq == 0.0f) {
@@ -15,104 +34,130 @@ CollisionManifold CollisionSystem::circleVsCircle(const PhysicsBody& a, float ra
     }
     
     float distance = std::sqrt(distSq);
-    
     m.isColliding = true;
     m.penetration = radiusSum - distance;
-    m.normal = n / distance; // Normalize
-    
+    m.normal = n / distance;
+    m.contactPoint = a.position + m.normal * radiusA;
     return m;
 }
 
-CollisionManifold CollisionSystem::circleVsAABB(const PhysicsBody& circle, float radius, 
-                                                const PhysicsBody& box, sf::Vector2f boxHalfSize) {
+CollisionManifold CollisionSystem::circleVsOBB(const PhysicsBody& circle, float radius, 
+                                               const PhysicsBody& box, sf::Vector2f boxHalfSize) {
     CollisionManifold m;
     
-    // Vector from box to circle
-    sf::Vector2f n = circle.position - box.position;
+    // Transform circle center into box's local space
+    sf::Vector2f d = circle.position - box.position;
+    sf::Vector2f localCircle = rotateVec(d, -box.rotation);
     
-    // Closest point on box to center of circle
-    sf::Vector2f closest = n;
-    
-    // Clamp point to edges of the AABB
+    // Find closest point on box
+    sf::Vector2f closest = localCircle;
     closest.x = std::max(-boxHalfSize.x, std::min(boxHalfSize.x, closest.x));
     closest.y = std::max(-boxHalfSize.y, std::min(boxHalfSize.y, closest.y));
     
     bool inside = false;
-    
-    // Circle is inside the AABB
-    if (n == closest) {
+    if (localCircle == closest) {
         inside = true;
-        // Find closest axis
-        if (std::abs(n.x) > std::abs(n.y)) {
-            if (closest.x > 0) closest.x = boxHalfSize.x;
-            else closest.x = -boxHalfSize.x;
+        // Circle center is inside the box, push it out to the closest edge
+        if (std::abs(localCircle.x - boxHalfSize.x) < std::abs(localCircle.x + boxHalfSize.x)) {
+            closest.x = (localCircle.x > 0) ? boxHalfSize.x : -boxHalfSize.x;
         } else {
-            if (closest.y > 0) closest.y = boxHalfSize.y;
-            else closest.y = -boxHalfSize.y;
+            closest.y = (localCircle.y > 0) ? boxHalfSize.y : -boxHalfSize.y;
         }
     }
     
-    sf::Vector2f normal = n - closest;
-    float distSq = normal.x * normal.x + normal.y * normal.y;
+    sf::Vector2f localNormal = localCircle - closest;
+    float distSq = dotProduct(localNormal, localNormal);
     
-    if (distSq > radius * radius && !inside) {
-        return m; // No collision
+    if (!inside && distSq > radius * radius) {
+        return m;
     }
     
     float distance = std::sqrt(distSq);
-    
     m.isColliding = true;
-    if (inside) {
-        m.normal = normal / distance; // Points from box towards circle center (inside). We want A to B, A is circle, B is box, so from circle to box is roughly -normal? Wait. normal points outwards towards the circle center which is deeper inside. This points from boundary to deeper inside. So from B to A. We want A to B!
-        // No wait, if inside, n=circle-box. closest is on boundary. normal = n - closest. This points from boundary to circle center (which is further inside). So it points INWARDS towards box center.
-        // If normal points INWARDS towards box center, it points from Circle to Box!
-        m.normal = normal / distance;
-        m.penetration = radius + distance;
+    m.contactPoint = box.position + rotateVec(closest, box.rotation);
+    
+    if (distance == 0.0f) {
+        m.penetration = radius;
+        m.normal = rotateVec(sf::Vector2f(0, -1), box.rotation); // Arbitrary normal
     } else {
-        // normal = n - closest. Points from boundary to circle center. So from Box to Circle.
-        // We want normal from Circle to Box!
-        m.normal = -normal / distance;
-        m.penetration = radius - distance;
+        sf::Vector2f worldNormal = rotateVec(localNormal / distance, box.rotation);
+        if (inside) {
+            m.normal = worldNormal; // from circle to box
+            m.penetration = radius + distance;
+        } else {
+            m.normal = -worldNormal; // we want normal from A to B (circle to box)
+            m.penetration = radius - distance;
+        }
     }
     
     return m;
 }
 
-CollisionManifold CollisionSystem::aabbVsAABB(const PhysicsBody& a, sf::Vector2f halfSizeA, 
-                                              const PhysicsBody& b, sf::Vector2f halfSizeB) {
+// OBB vs OBB SAT
+CollisionManifold CollisionSystem::obbVsOBB(const PhysicsBody& a, sf::Vector2f halfSizeA, 
+                                            const PhysicsBody& b, sf::Vector2f halfSizeB) {
     CollisionManifold m;
     
-    sf::Vector2f n = b.position - a.position;
+    sf::Vector2f axes[4] = {
+        rotateVec(sf::Vector2f(1, 0), a.rotation),
+        rotateVec(sf::Vector2f(0, 1), a.rotation),
+        rotateVec(sf::Vector2f(1, 0), b.rotation),
+        rotateVec(sf::Vector2f(0, 1), b.rotation)
+    };
     
-    float x_overlap = halfSizeA.x + halfSizeB.x - std::abs(n.x);
-    if (x_overlap > 0) {
-        float y_overlap = halfSizeA.y + halfSizeB.y - std::abs(n.y);
-        if (y_overlap > 0) {
-            m.isColliding = true;
-            if (x_overlap < y_overlap) {
-                if (n.x < 0) m.normal = sf::Vector2f(-1, 0);
-                else m.normal = sf::Vector2f(1, 0);
-                m.penetration = x_overlap;
-            } else {
-                if (n.y < 0) m.normal = sf::Vector2f(0, -1);
-                else m.normal = sf::Vector2f(0, 1);
-                m.penetration = y_overlap;
+    float minOverlap = std::numeric_limits<float>::max();
+    sf::Vector2f smallestAxis;
+    
+    for (int i = 0; i < 4; ++i) {
+        sf::Vector2f axis = axes[i];
+        
+        // Project A
+        float pA1 = std::abs(dotProduct(rotateVec(sf::Vector2f(halfSizeA.x, 0), a.rotation), axis)) + 
+                    std::abs(dotProduct(rotateVec(sf::Vector2f(0, halfSizeA.y), a.rotation), axis));
+        float cA = dotProduct(a.position, axis);
+        float minA = cA - pA1;
+        float maxA = cA + pA1;
+        
+        // Project B
+        float pB1 = std::abs(dotProduct(rotateVec(sf::Vector2f(halfSizeB.x, 0), b.rotation), axis)) + 
+                    std::abs(dotProduct(rotateVec(sf::Vector2f(0, halfSizeB.y), b.rotation), axis));
+        float cB = dotProduct(b.position, axis);
+        float minB = cB - pB1;
+        float maxB = cB + pB1;
+        
+        if (maxA < minB || maxB < minA) {
+            return m; // Separating axis found
+        }
+        
+        float overlap = std::min(maxA, maxB) - std::max(minA, minB);
+        if (overlap < minOverlap) {
+            minOverlap = overlap;
+            smallestAxis = axis;
+            if (cA > cB) {
+                smallestAxis = -smallestAxis; // point from A to B
             }
         }
     }
+    
+    m.isColliding = true;
+    m.penetration = minOverlap;
+    m.normal = smallestAxis;
+    
+    // Approximate contact point: halfway between centers along the normal
+    m.contactPoint = a.position + (b.position - a.position) * 0.5f;
+    
     return m;
 }
 
 void CollisionSystem::resolveCollision(PhysicsBody& a, PhysicsBody& b, CollisionManifold& manifold) {
     if (!manifold.isColliding) return;
     
-    // 1. Positional correction (prevent sinking)
-    const float percent = 0.8f; // usually 0.2 to 0.8
-    const float slop = 0.01f; // usually 0.01 to 0.1
+    // 1. Positional correction
+    const float percent = 0.8f;
+    const float slop = 0.01f;
     float invMassA = a.isStatic ? 0.0f : 1.0f / a.mass;
     float invMassB = b.isStatic ? 0.0f : 1.0f / b.mass;
     float totalInvMass = invMassA + invMassB;
-    
     if (totalInvMass == 0.0f) return;
     
     float correctionAmount = std::max(manifold.penetration - slop, 0.0f) / totalInvMass * percent;
@@ -122,48 +167,76 @@ void CollisionSystem::resolveCollision(PhysicsBody& a, PhysicsBody& b, Collision
     if (!b.isStatic) b.position += correction * invMassB;
     
     // 2. Impulse resolution
-    sf::Vector2f rv = b.velocity - a.velocity;
-    float velAlongNormal = rv.x * manifold.normal.x + rv.y * manifold.normal.y;
+    sf::Vector2f rA = manifold.contactPoint - a.position;
+    sf::Vector2f rB = manifold.contactPoint - b.position;
     
-    // Do not resolve if velocities are separating
+    sf::Vector2f vA = a.velocity + crossProduct(a.angularVelocity, rA);
+    sf::Vector2f vB = b.velocity + crossProduct(b.angularVelocity, rB);
+    sf::Vector2f rv = vB - vA;
+    
+    float velAlongNormal = dotProduct(rv, manifold.normal);
     if (velAlongNormal > 0) return;
     
     float e = std::min(a.restitution, b.restitution);
     if (std::abs(velAlongNormal) < 25.0f) {
-        e = 0.0f; // Prevent micro-bouncing
-        
-        // Hack for stacking stability: if resting contact, zero out vertical velocities
+        e = 0.0f;
         if (std::abs(manifold.normal.y) > 0.8f) {
-            a.velocity.y = 0.0f;
-            b.velocity.y = 0.0f;
-            // Update rv and velAlongNormal since velocity changed
-            rv = b.velocity - a.velocity;
-            velAlongNormal = rv.x * manifold.normal.x + rv.y * manifold.normal.y;
+            // Propagate resting state from bottom to top to prevent mid-air slow falls
+            if (manifold.normal.y > 0 && std::abs(b.velocity.y) < 5.0f) { // A is above B, B is resting
+                a.velocity.y = 0.0f;
+                a.velocity.x *= 0.1f; // Massive horizontal friction
+                a.angularVelocity *= 0.1f;
+            } else if (manifold.normal.y < 0 && std::abs(a.velocity.y) < 5.0f) { // B is above A, A is resting
+                b.velocity.y = 0.0f;
+                b.velocity.x *= 0.1f; // Massive horizontal friction
+                b.angularVelocity *= 0.1f;
+            }
+            // Recalculate relative velocity after stabilization
+            vA = a.velocity + crossProduct(a.angularVelocity, rA);
+            vB = b.velocity + crossProduct(b.angularVelocity, rB);
+            rv = vB - vA;
+            velAlongNormal = dotProduct(rv, manifold.normal);
         }
     }
     
-    float j = -(1 + e) * velAlongNormal;
-    j /= totalInvMass;
+    float invInertiaA = a.isStatic ? 0.0f : 1.0f / a.inertia;
+    float invInertiaB = b.isStatic ? 0.0f : 1.0f / b.inertia;
     
+    float rA_cross_n = crossProduct(rA, manifold.normal);
+    float rB_cross_n = crossProduct(rB, manifold.normal);
+    
+    float invMassSum = invMassA + invMassB + 
+                       (rA_cross_n * rA_cross_n) * invInertiaA + 
+                       (rB_cross_n * rB_cross_n) * invInertiaB;
+                       
+    float j = -(1 + e) * velAlongNormal / invMassSum;
     sf::Vector2f impulse = manifold.normal * j;
     
-    if (!a.isStatic) a.velocity -= impulse * invMassA;
-    if (!b.isStatic) b.velocity += impulse * invMassB;
+    if (!a.isStatic) {
+        a.velocity -= impulse * invMassA;
+        a.angularVelocity -= crossProduct(rA, impulse) * invInertiaA;
+    }
+    if (!b.isStatic) {
+        b.velocity += impulse * invMassB;
+        b.angularVelocity += crossProduct(rB, impulse) * invInertiaB;
+    }
     
-    // Store impact force for damage calculation later
     manifold.impactForce = j;
     
     // 3. Friction resolution
     sf::Vector2f tangent = rv - (velAlongNormal * manifold.normal);
-    float tangentLen = std::sqrt(tangent.x * tangent.x + tangent.y * tangent.y);
+    float tangentLen = std::sqrt(dotProduct(tangent, tangent));
     if (tangentLen > 0.0001f) {
         tangent /= tangentLen;
-        float jt = -(rv.x * tangent.x + rv.y * tangent.y);
-        jt /= totalInvMass;
-        
+        float rA_cross_t = crossProduct(rA, tangent);
+        float rB_cross_t = crossProduct(rB, tangent);
+        float invMassSumT = invMassA + invMassB + 
+                            (rA_cross_t * rA_cross_t) * invInertiaA + 
+                            (rB_cross_t * rB_cross_t) * invInertiaB;
+                            
+        float jt = -dotProduct(rv, tangent) / invMassSumT;
         float mu = std::min(a.friction, b.friction);
         
-        // Coulomb's law: friction impulse is clamped by mu * normal impulse
         sf::Vector2f frictionImpulse;
         if (std::abs(jt) < j * mu) {
             frictionImpulse = jt * tangent;
@@ -171,7 +244,13 @@ void CollisionSystem::resolveCollision(PhysicsBody& a, PhysicsBody& b, Collision
             frictionImpulse = -j * mu * tangent;
         }
         
-        if (!a.isStatic) a.velocity -= frictionImpulse * invMassA;
-        if (!b.isStatic) b.velocity += frictionImpulse * invMassB;
+        if (!a.isStatic) {
+            a.velocity -= frictionImpulse * invMassA;
+            a.angularVelocity -= crossProduct(rA, frictionImpulse) * invInertiaA;
+        }
+        if (!b.isStatic) {
+            b.velocity += frictionImpulse * invMassB;
+            b.angularVelocity += crossProduct(rB, frictionImpulse) * invInertiaB;
+        }
     }
 }

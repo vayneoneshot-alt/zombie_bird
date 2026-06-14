@@ -6,9 +6,11 @@ ExplosiveBird::ExplosiveBird(sf::Vector2f pos) : Bird(pos, 12.5f) {
     
     sf::FloatRect bounds = sprite.getLocalBounds();
     sprite.setOrigin(bounds.width / 2.0f, bounds.height / 2.0f);
-    sprite.setScale(0.25f, 0.25f);
     
-    radius = (bounds.width / 2.0f) * 0.25f;
+    // Auto scale to radius 20.0f
+    float targetRadius = 20.0f;
+    sprite.setScale(targetRadius * 2.0f / bounds.width, targetRadius * 2.0f / bounds.height);
+    radius = targetRadius;
     
     explosionEffect.setRadius(getExplosionRadius());
     explosionEffect.setOrigin(getExplosionRadius(), getExplosionRadius());

@@ -9,6 +9,7 @@ struct CollisionManifold {
     sf::Vector2f normal = {0.0f, 0.0f};
     float penetration = 0.0f;
     float impactForce = 0.0f;
+    sf::Vector2f contactPoint = {0.0f, 0.0f};
 };
 
 class CollisionSystem {
@@ -17,11 +18,11 @@ public:
     static CollisionManifold circleVsCircle(const PhysicsBody& a, float radiusA, 
                                             const PhysicsBody& b, float radiusB);
                                             
-    static CollisionManifold circleVsAABB(const PhysicsBody& circle, float radius, 
-                                          const PhysicsBody& box, sf::Vector2f boxHalfSize);
+    static CollisionManifold circleVsOBB(const PhysicsBody& circle, float radius, 
+                                         const PhysicsBody& box, sf::Vector2f boxHalfSize);
                                           
-    static CollisionManifold aabbVsAABB(const PhysicsBody& a, sf::Vector2f halfSizeA, 
-                                        const PhysicsBody& b, sf::Vector2f halfSizeB);
+    static CollisionManifold obbVsOBB(const PhysicsBody& a, sf::Vector2f halfSizeA, 
+                                      const PhysicsBody& b, sf::Vector2f halfSizeB);
 
     // Resolve collision via impulses
     static void resolveCollision(PhysicsBody& a, PhysicsBody& b, CollisionManifold& manifold);

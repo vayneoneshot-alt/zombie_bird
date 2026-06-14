@@ -14,8 +14,8 @@ public:
     
     bool hasSplit() const { return split_triggered; }
     
-    // Returns 2 new child birds to be added to the entity list
-    std::vector<std::unique_ptr<BasicBird>> spawnChildren();
+    // Returns the newly spawned children
+    std::vector<std::unique_ptr<SplitBird>> spawnChildren();
 
 private:
     bool split_triggered = false;

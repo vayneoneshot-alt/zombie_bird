@@ -6,12 +6,15 @@ Pig::Pig(sf::Vector2f pos) {
     
     sf::FloatRect bounds = sprite.getLocalBounds();
     sprite.setOrigin(bounds.width / 2.0f, bounds.height / 2.0f);
-    sprite.setScale(0.225f, 0.225f);
     
-    radius = (bounds.width / 2.0f) * 0.225f;
+    // Auto scale to radius 20.0f
+    float targetRadius = 20.0f;
+    sprite.setScale(targetRadius * 2.0f / bounds.width, targetRadius * 2.0f / bounds.height);
+    radius = targetRadius;
     
     body.position = pos;
     body.mass = 1.5f;
+    body.inertia = 0.5f * body.mass * radius * radius;
     body.restitution = 0.3f;
     body.friction = 0.8f;
     body.isStatic = false;
@@ -24,6 +27,7 @@ void Pig::update(float dt) {
         body.applyForce(sf::Vector2f(0.0f, 980.0f * body.mass)); // Gravity
         body.integrate(dt);
         sprite.setPosition(body.position);
+        sprite.setRotation(body.rotation * 180.0f / 3.14159265f);
     }
 }
 

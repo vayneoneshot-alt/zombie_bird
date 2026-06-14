@@ -3,6 +3,7 @@
 Bird::Bird(sf::Vector2f pos, float r) : radius(r) {
     body.position = pos;
     body.mass = 1.0f;
+    body.inertia = 0.5f * body.mass * radius * radius;
     body.restitution = 0.4f;
     body.friction = 0.8f;
     body.isStatic = true; // Static until launched
@@ -30,6 +31,7 @@ void Bird::update(float dt) {
     
     // Update sprite position to match physics body
     sprite.setPosition(body.position);
+    sprite.setRotation(body.rotation * 180.0f / 3.14159265f);
 }
 
 void Bird::draw(sf::RenderWindow& window) {

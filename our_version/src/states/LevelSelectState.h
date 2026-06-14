@@ -22,7 +22,7 @@ private:
     sf::Text titleText;
     
     struct LevelButton {
-        sf::RectangleShape rect;
+        sf::Sprite sprite;
         sf::Text text;
         std::string levelFile;
     };

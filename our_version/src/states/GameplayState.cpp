@@ -146,7 +146,7 @@ void GameplayState::update(float dt) {
     }
 
     // SplitBird child spawning check
-    std::vector<std::unique_ptr<BasicBird>> newChildren;
+    std::vector<std::unique_ptr<Bird>> newChildren;
     for (auto& bird : activeBirds) {
         if (SplitBird* sb = dynamic_cast<SplitBird*>(bird.get())) {
             if (sb->hasSplit()) {
@@ -195,7 +195,7 @@ void GameplayState::update(float dt) {
             } else {
                 block->getBody().velocity.y *= -block->getBody().restitution;
             }
-            block->getBody().velocity.x *= 0.90f;
+            block->getBody().velocity.x *= 0.50f;
         }
     }
 
@@ -240,7 +240,7 @@ void GameplayState::checkCollisions() {
         // Bird vs Block
         for (auto& block : blocks) {
             if (!block->isDestroyed()) {
-                CollisionManifold m = CollisionSystem::circleVsAABB(
+                CollisionManifold m = CollisionSystem::circleVsOBB(
                     bird->getBody(), bird->getRadius(),
                     block->getBody(), block->getHalfSize()
                 );
@@ -259,11 +259,22 @@ void GameplayState::checkCollisions() {
         for (auto& block : blocks) {
             if (block->isDestroyed()) continue;
             
-            CollisionManifold m = CollisionSystem::circleVsAABB(
+            CollisionManifold m = CollisionSystem::circleVsOBB(
                 pig->getBody(), pig->getRadius(),
                 block->getBody(), block->getHalfSize()
             );
             CollisionSystem::resolveCollision(pig->getBody(), block->getBody(), m);
+            
+            // Allow heavy falling blocks to crush the pig
+            if (m.isColliding) {
+                float impact = std::abs(m.impactForce);
+                // Impact force corresponds to momentum transferred. 
+                // A heavy block falling fast creates a large impulse j.
+                if (impact > 150.0f) { 
+                    pig->receiveDamage(impact);
+                    if (pig->isDead()) score += 100;
+                }
+            }
         }
     }
     
@@ -287,7 +298,7 @@ void GameplayState::checkCollisions() {
         for (size_t j = i + 1; j < blocks.size(); ++j) {
             if (blocks[j]->isDestroyed()) continue;
             
-            CollisionManifold m = CollisionSystem::aabbVsAABB(
+            CollisionManifold m = CollisionSystem::obbVsOBB(
                 blocks[i]->getBody(), blocks[i]->getHalfSize(),
                 blocks[j]->getBody(), blocks[j]->getHalfSize()
             );

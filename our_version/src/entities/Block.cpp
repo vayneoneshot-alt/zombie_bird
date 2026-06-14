@@ -5,8 +5,9 @@ Block::Block(sf::Vector2f pos, sf::Vector2f size, Material mat)
     
     body.position = pos;
     body.mass = 2.0f;
+    body.inertia = body.mass * (size.x * size.x + size.y * size.y) / 12.0f;
     body.restitution = 0.1f;
-    body.friction = 0.9f;
+    body.friction = 20.0f; // Very high friction to prevent sliding
     body.isStatic = false;
     
     maxHealth = 200.0f; // Threshold for breaking
@@ -35,10 +36,12 @@ void Block::updateTexture() {
 
 void Block::update(float dt) {
     if (is_active && !isDestroyed()) {
-        body.applyForce(sf::Vector2f(0.0f, 980.0f * body.mass)); // Gravity
+        body.applyForce(sf::Vector2f(0.0f, 100.0f * body.mass)); // Gravity
         body.integrate(dt);
-        body.velocity.x *= 0.90f; // Horizontal damping to reduce sliding
+        body.velocity.x *= 0.99f; // Light air friction
+        body.angularVelocity *= 0.99f;
         sprite.setPosition(body.position);
+        sprite.setRotation(body.rotation * 180.0f / 3.14159265f); // Convert radians to degrees
     }
 }
 
