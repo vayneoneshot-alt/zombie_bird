@@ -19,7 +19,7 @@ void Bird::launch(sf::Vector2f velocity) {
 
 void Bird::update(float dt) {
     if (launched && !body.isStatic) {
-        body.applyForce(sf::Vector2f(0.0f, 980.0f * body.mass)); // Gravity
+        body.applyForce(sf::Vector2f(0.0f, 600.0f * body.mass)); // Reduced gravity for birds
         body.integrate(dt);
         
         lifetime += dt;

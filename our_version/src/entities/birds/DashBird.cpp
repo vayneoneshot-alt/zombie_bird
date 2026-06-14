@@ -1,15 +1,15 @@
 #include "DashBird.h"
 #include <cmath>
 
-DashBird::DashBird(sf::Vector2f pos) : Bird(pos, 20.0f) {
+DashBird::DashBird(sf::Vector2f pos) : Bird(pos, 10.0f) {
     auto& rm = ResourceManager::getInstance();
     sprite.setTexture(rm.getTexture("bird_dash"));
     
     sf::FloatRect bounds = sprite.getLocalBounds();
     sprite.setOrigin(bounds.width / 2.0f, bounds.height / 2.0f);
-    sprite.setScale(0.4f, 0.4f);
+    sprite.setScale(0.2f, 0.2f);
     
-    radius = (bounds.width / 2.0f) * 0.4f;
+    radius = (bounds.width / 2.0f) * 0.2f;
 }
 
 void DashBird::onAbility() {

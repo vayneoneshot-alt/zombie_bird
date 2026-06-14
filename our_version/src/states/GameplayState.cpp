@@ -164,25 +164,37 @@ void GameplayState::update(float dt) {
     // Update Entities
     for (auto& bird : activeBirds) {
         bird->update(dt);
-        if (bird->getBody().position.y + bird->getBounds().height/2.0f > groundY) {
+        if (bird->getBody().position.y + bird->getBounds().height/2.0f >= groundY) {
             bird->getBody().position.y = groundY - bird->getBounds().height/2.0f;
-            bird->getBody().velocity.y *= -bird->getBody().restitution;
-            bird->getBody().velocity.x *= 0.98f; // Ground friction
+            if (bird->getBody().velocity.y > 0.0f && bird->getBody().velocity.y < 25.0f) {
+                bird->getBody().velocity.y = 0.0f;
+            } else {
+                bird->getBody().velocity.y *= -bird->getBody().restitution;
+            }
+            bird->getBody().velocity.x *= 0.96f; // Ground friction
         }
     }
     for (auto& pig : pigs) {
         pig->update(dt);
-        if (pig->getBody().position.y + pig->getRadius() > groundY) {
+        if (pig->getBody().position.y + pig->getRadius() >= groundY) {
             pig->getBody().position.y = groundY - pig->getRadius();
-            pig->getBody().velocity.y *= -pig->getBody().restitution;
+            if (pig->getBody().velocity.y > 0.0f && pig->getBody().velocity.y < 25.0f) {
+                pig->getBody().velocity.y = 0.0f;
+            } else {
+                pig->getBody().velocity.y *= -pig->getBody().restitution;
+            }
             pig->getBody().velocity.x *= 0.95f;
         }
     }
     for (auto& block : blocks) {
         block->update(dt);
-        if (block->getBody().position.y + block->getHalfSize().y > groundY) {
+        if (block->getBody().position.y + block->getHalfSize().y >= groundY) {
             block->getBody().position.y = groundY - block->getHalfSize().y;
-            block->getBody().velocity.y *= -block->getBody().restitution;
+            if (block->getBody().velocity.y > 0.0f && block->getBody().velocity.y < 25.0f) {
+                block->getBody().velocity.y = 0.0f;
+            } else {
+                block->getBody().velocity.y *= -block->getBody().restitution;
+            }
             block->getBody().velocity.x *= 0.90f;
         }
     }
@@ -191,7 +203,7 @@ void GameplayState::update(float dt) {
 
     // Only check win/loss if at least one bird has been launched
     if (!activeBirds.empty()) {
-        checkWinLoss();
+        if (checkWinLoss()) return; // Early exit to prevent use-after-free crash
     }
 
     scoreText.setString("Score: " + std::to_string(score));
@@ -314,7 +326,7 @@ void GameplayState::resolveExplosions(const ExplosiveBird* eb) {
     }
 }
 
-void GameplayState::checkWinLoss() {
+bool GameplayState::checkWinLoss() {
     bool allPigsDead = true;
     for (const auto& pig : pigs) {
         if (!pig->isDead()) {
@@ -326,6 +338,7 @@ void GameplayState::checkWinLoss() {
     if (allPigsDead) {
         std::cout << "Win! Returning to menu...\n";
         stateManager.changeState(std::make_unique<WinState>(stateManager, window, score));
+        return true;
     } else {
         bool outOfBirds = birdQueue.empty();
         bool allBirdsStopped = true;
@@ -339,8 +352,10 @@ void GameplayState::checkWinLoss() {
         if (outOfBirds && allBirdsStopped) {
             std::cout << "Lose! Returning to menu...\n";
             stateManager.changeState(std::make_unique<LoseState>(stateManager, window, score));
+            return true;
         }
     }
+    return false;
 }
 
 void GameplayState::draw(sf::RenderWindow& renderWindow) {
@@ -348,7 +363,7 @@ void GameplayState::draw(sf::RenderWindow& renderWindow) {
     slingshot->draw(renderWindow);
     
     if (slingshot->isDragging() && !birdQueue.empty()) {
-        trajectoryLine.calculate(slingshot->getPullPosition(), slingshot->getLaunchVelocityPreview(), 980.0f);
+        trajectoryLine.calculate(slingshot->getPullPosition(), slingshot->getLaunchVelocityPreview(), 600.0f);
         trajectoryLine.draw(renderWindow);
     }
     

@@ -129,6 +129,18 @@ void CollisionSystem::resolveCollision(PhysicsBody& a, PhysicsBody& b, Collision
     if (velAlongNormal > 0) return;
     
     float e = std::min(a.restitution, b.restitution);
+    if (std::abs(velAlongNormal) < 25.0f) {
+        e = 0.0f; // Prevent micro-bouncing
+        
+        // Hack for stacking stability: if resting contact, zero out vertical velocities
+        if (std::abs(manifold.normal.y) > 0.8f) {
+            a.velocity.y = 0.0f;
+            b.velocity.y = 0.0f;
+            // Update rv and velAlongNormal since velocity changed
+            rv = b.velocity - a.velocity;
+            velAlongNormal = rv.x * manifold.normal.x + rv.y * manifold.normal.y;
+        }
+    }
     
     float j = -(1 + e) * velAlongNormal;
     j /= totalInvMass;
@@ -140,4 +152,26 @@ void CollisionSystem::resolveCollision(PhysicsBody& a, PhysicsBody& b, Collision
     
     // Store impact force for damage calculation later
     manifold.impactForce = j;
+    
+    // 3. Friction resolution
+    sf::Vector2f tangent = rv - (velAlongNormal * manifold.normal);
+    float tangentLen = std::sqrt(tangent.x * tangent.x + tangent.y * tangent.y);
+    if (tangentLen > 0.0001f) {
+        tangent /= tangentLen;
+        float jt = -(rv.x * tangent.x + rv.y * tangent.y);
+        jt /= totalInvMass;
+        
+        float mu = std::min(a.friction, b.friction);
+        
+        // Coulomb's law: friction impulse is clamped by mu * normal impulse
+        sf::Vector2f frictionImpulse;
+        if (std::abs(jt) < j * mu) {
+            frictionImpulse = jt * tangent;
+        } else {
+            frictionImpulse = -j * mu * tangent;
+        }
+        
+        if (!a.isStatic) a.velocity -= frictionImpulse * invMassA;
+        if (!b.isStatic) b.velocity += frictionImpulse * invMassB;
+    }
 }

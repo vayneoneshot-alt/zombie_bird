@@ -1,14 +1,14 @@
 #include "ExplosiveBird.h"
 
-ExplosiveBird::ExplosiveBird(sf::Vector2f pos) : Bird(pos, 20.0f) {
+ExplosiveBird::ExplosiveBird(sf::Vector2f pos) : Bird(pos, 12.5f) {
     auto& rm = ResourceManager::getInstance();
     sprite.setTexture(rm.getTexture("bird_explosive"));
     
     sf::FloatRect bounds = sprite.getLocalBounds();
     sprite.setOrigin(bounds.width / 2.0f, bounds.height / 2.0f);
-    sprite.setScale(0.4f, 0.4f);
+    sprite.setScale(0.25f, 0.25f);
     
-    radius = (bounds.width / 2.0f) * 0.4f;
+    radius = (bounds.width / 2.0f) * 0.25f;
     
     explosionEffect.setRadius(getExplosionRadius());
     explosionEffect.setOrigin(getExplosionRadius(), getExplosionRadius());

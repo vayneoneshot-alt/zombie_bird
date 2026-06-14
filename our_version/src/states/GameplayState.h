@@ -48,7 +48,7 @@ private:
     
     void checkCollisions();
     void resolveExplosions(const ExplosiveBird* source);
-    void checkWinLoss();
+    bool checkWinLoss();
     void loadLevel();
 };
 

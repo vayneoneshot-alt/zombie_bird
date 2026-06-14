@@ -37,6 +37,7 @@ void Block::update(float dt) {
     if (is_active && !isDestroyed()) {
         body.applyForce(sf::Vector2f(0.0f, 980.0f * body.mass)); // Gravity
         body.integrate(dt);
+        body.velocity.x *= 0.90f; // Horizontal damping to reduce sliding
         sprite.setPosition(body.position);
     }
 }

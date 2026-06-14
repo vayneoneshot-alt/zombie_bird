@@ -6,9 +6,9 @@ Pig::Pig(sf::Vector2f pos) {
     
     sf::FloatRect bounds = sprite.getLocalBounds();
     sprite.setOrigin(bounds.width / 2.0f, bounds.height / 2.0f);
-    sprite.setScale(0.45f, 0.45f);
+    sprite.setScale(0.225f, 0.225f);
     
-    radius = (bounds.width / 2.0f) * 0.45f;
+    radius = (bounds.width / 2.0f) * 0.225f;
     
     body.position = pos;
     body.mass = 1.5f;
