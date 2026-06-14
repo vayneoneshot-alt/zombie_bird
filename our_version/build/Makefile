@@ -152,6 +152,30 @@ src/core/CollisionSystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/core/CollisionSystem.cpp.s
 .PHONY : src/core/CollisionSystem.cpp.s
 
+src/core/PhysicsWorld.obj: src/core/PhysicsWorld.cpp.obj
+.PHONY : src/core/PhysicsWorld.obj
+
+# target to build an object file
+src/core/PhysicsWorld.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.obj
+.PHONY : src/core/PhysicsWorld.cpp.obj
+
+src/core/PhysicsWorld.i: src/core/PhysicsWorld.cpp.i
+.PHONY : src/core/PhysicsWorld.i
+
+# target to preprocess a source file
+src/core/PhysicsWorld.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.i
+.PHONY : src/core/PhysicsWorld.cpp.i
+
+src/core/PhysicsWorld.s: src/core/PhysicsWorld.cpp.s
+.PHONY : src/core/PhysicsWorld.s
+
+# target to generate assembly for a file
+src/core/PhysicsWorld.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.s
+.PHONY : src/core/PhysicsWorld.cpp.s
+
 src/core/ResourceManager.obj: src/core/ResourceManager.cpp.obj
 .PHONY : src/core/ResourceManager.obj
 
@@ -596,6 +620,9 @@ help:
 	@echo ... src/core/CollisionSystem.obj
 	@echo ... src/core/CollisionSystem.i
 	@echo ... src/core/CollisionSystem.s
+	@echo ... src/core/PhysicsWorld.obj
+	@echo ... src/core/PhysicsWorld.i
+	@echo ... src/core/PhysicsWorld.s
 	@echo ... src/core/ResourceManager.obj
 	@echo ... src/core/ResourceManager.i
 	@echo ... src/core/ResourceManager.s

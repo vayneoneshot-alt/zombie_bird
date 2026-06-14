@@ -23,12 +23,11 @@ Pig::Pig(sf::Vector2f pos) {
 }
 
 void Pig::update(float dt) {
-    if (is_active && !isDead()) {
-        body.applyForce(sf::Vector2f(0.0f, 980.0f * body.mass)); // Gravity
-        body.integrate(dt);
-        sprite.setPosition(body.position);
-        sprite.setRotation(body.rotation * 180.0f / 3.14159265f);
-    }
+    if (isDead()) return;
+    
+    // Physics is handled by PhysicsWorld
+    sprite.setPosition(body.position);
+    sprite.setRotation(body.rotation * 180.0f / 3.14159f);
 }
 
 void Pig::draw(sf::RenderWindow& window) {

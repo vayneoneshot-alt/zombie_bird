@@ -12,6 +12,7 @@ include_directories(src)
 
 # Find all source files
 file(GLOB_RECURSE SOURCES "src/*.cpp")
+list(APPEND SOURCES "src/core/PhysicsWorld.cpp")
 
 # Create executable
 add_executable(HappyBird ${SOURCES})

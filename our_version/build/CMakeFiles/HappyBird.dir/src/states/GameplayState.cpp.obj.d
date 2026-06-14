@@ -306,6 +306,8 @@ CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.obj: \
  C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h \
  C:/hoctap/C++/zombie_bird/our_version/src/ui/TrajectoryLine.h \
  C:/hoctap/C++/zombie_bird/our_version/src/level/LevelLoader.h \
+ C:/hoctap/C++/zombie_bird/our_version/src/core/PhysicsWorld.h \
+ C:/hoctap/C++/zombie_bird/our_version/src/core/PhysicsBody.h \
  C:/msys64/ucrt64/include/c++/15.2.0/deque \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_deque.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/deque.tcc \
@@ -313,7 +315,6 @@ CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.obj: \
  C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h \
  C:\hoctap\C++\zombie_bird\our_version\src\states\LoseState.h \
  C:/hoctap/C++/zombie_bird/our_version/src/core/CollisionSystem.h \
- C:/hoctap/C++/zombie_bird/our_version/src/core/PhysicsBody.h \
  C:/msys64/ucrt64/include/c++/15.2.0/cmath \
  C:/msys64/ucrt64/include/math.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/specfun.h \

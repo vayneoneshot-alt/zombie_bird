@@ -13,6 +13,7 @@
 #include "../ui/Slingshot.h"
 #include "../ui/TrajectoryLine.h"
 #include "../level/LevelLoader.h"
+#include "../core/PhysicsWorld.h"
 #include <vector>
 #include <memory>
 #include <deque>
@@ -42,6 +43,9 @@ private:
     
     std::unique_ptr<Slingshot> slingshot;
     TrajectoryLine trajectoryLine;
+    
+    PhysicsWorld physicsWorld;
+    PhysicsBody groundBody;
     
     sf::Text scoreText;
     int score = 0;

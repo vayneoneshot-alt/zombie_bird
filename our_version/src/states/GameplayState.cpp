@@ -22,6 +22,13 @@ void GameplayState::onEnter() {
     scoreText.setFillColor(sf::Color::White);
     scoreText.setPosition(20.0f, 20.0f);
     scoreText.setString("Score: 0");
+    
+    groundBody.position = {window.getSize().x / 2.0f, window.getSize().y - 30.0f + 100.0f}; // groundY is win.y - 30. halfHeight is 100.
+    groundBody.setStatic(true);
+    groundBody.friction = 0.96f;
+    groundBody.restitution = 0.2f;
+    groundBody.userData = nullptr;
+    physicsWorld.addBody(&groundBody);
 
     loadLevel();
 }
@@ -66,16 +73,22 @@ void GameplayState::loadLevel() {
     
     // Load Pigs
     for (const auto& pigData : levelData.pigs) {
-        pigs.push_back(std::make_unique<Pig>(sf::Vector2f(pigData.x, pigData.y)));
+        auto pig = std::make_unique<Pig>(sf::Vector2f(pigData.x, pigData.y));
+        pig->getBody().userData = pig.get();
+        physicsWorld.addBody(&pig->getBody());
+        pigs.push_back(std::move(pig));
     }
     
     // Load Blocks
     for (const auto& blockData : levelData.blocks) {
-        blocks.push_back(std::make_unique<Block>(
+        auto block = std::make_unique<Block>(
             sf::Vector2f(blockData.x, blockData.y),
             sf::Vector2f(blockData.w, blockData.h),
             Block::Material::WOOD
-        ));
+        );
+        block->getBody().userData = block.get();
+        physicsWorld.addBody(&block->getBody());
+        blocks.push_back(std::move(block));
     }
 }
 
@@ -116,6 +129,8 @@ void GameplayState::handleEvent(const sf::Event& e) {
             birdQueue.pop_front();
             
             bird->launch(launchVel);
+            bird->getBody().userData = bird.get();
+            physicsWorld.addBody(&bird->getBody());
             activeBirds.push_back(std::move(bird));
             
             // Move next bird to slingshot (if any)
@@ -152,6 +167,8 @@ void GameplayState::update(float dt) {
             if (sb->hasSplit()) {
                 auto children = sb->spawnChildren();
                 for (auto& child : children) {
+                    child->getBody().userData = child.get();
+                    physicsWorld.addBody(&child->getBody());
                     newChildren.push_back(std::move(child));
                 }
             }
@@ -161,45 +178,85 @@ void GameplayState::update(float dt) {
         activeBirds.push_back(std::move(child));
     }
 
-    // Update Entities
+    // Update Entities (just syncs sprites now)
     for (auto& bird : activeBirds) {
         bird->update(dt);
-        if (bird->getBody().position.y + bird->getBounds().height/2.0f >= groundY) {
-            bird->getBody().position.y = groundY - bird->getBounds().height/2.0f;
-            if (bird->getBody().velocity.y > 0.0f && bird->getBody().velocity.y < 25.0f) {
-                bird->getBody().velocity.y = 0.0f;
-            } else {
-                bird->getBody().velocity.y *= -bird->getBody().restitution;
-            }
-            bird->getBody().velocity.x *= 0.96f; // Ground friction
-        }
     }
     for (auto& pig : pigs) {
         pig->update(dt);
-        if (pig->getBody().position.y + pig->getRadius() >= groundY) {
-            pig->getBody().position.y = groundY - pig->getRadius();
-            if (pig->getBody().velocity.y > 0.0f && pig->getBody().velocity.y < 25.0f) {
-                pig->getBody().velocity.y = 0.0f;
-            } else {
-                pig->getBody().velocity.y *= -pig->getBody().restitution;
-            }
-            pig->getBody().velocity.x *= 0.95f;
-        }
     }
     for (auto& block : blocks) {
         block->update(dt);
-        if (block->getBody().position.y + block->getHalfSize().y >= groundY) {
-            block->getBody().position.y = groundY - block->getHalfSize().y;
-            if (block->getBody().velocity.y > 0.0f && block->getBody().velocity.y < 25.0f) {
-                block->getBody().velocity.y = 0.0f;
-            } else {
-                block->getBody().velocity.y *= -block->getBody().restitution;
-            }
-            block->getBody().velocity.x *= 0.50f;
-        }
     }
 
-    checkCollisions();
+    auto events = physicsWorld.step(dt, 10);
+    
+    // Process Collision events for damage
+    for (const auto& ev : events) {
+        Entity* entA = static_cast<Entity*>(ev.bodyA->userData);
+        Entity* entB = static_cast<Entity*>(ev.bodyB->userData);
+        
+        float impact = std::abs(ev.normalImpulse);
+        
+        if (entA && entB) {
+            bool isBirdA = dynamic_cast<Bird*>(entA) != nullptr;
+            bool isBirdB = dynamic_cast<Bird*>(entB) != nullptr;
+            bool isPigA = dynamic_cast<Pig*>(entA) != nullptr;
+            bool isPigB = dynamic_cast<Pig*>(entB) != nullptr;
+            bool isBlockA = dynamic_cast<Block*>(entA) != nullptr;
+            bool isBlockB = dynamic_cast<Block*>(entB) != nullptr;
+            
+            if ((isBirdA && isPigB) || (isBirdB && isPigA)) {
+                Pig* pig = isPigA ? static_cast<Pig*>(entA) : static_cast<Pig*>(entB);
+                if (!pig->isDead()) {
+                    pig->receiveDamage(impact * 50.0f);
+                    if (pig->isDead()) score += 100;
+                }
+            }
+            else if ((isBirdA && isBlockB) || (isBirdB && isBlockA)) {
+                Block* block = isBlockA ? static_cast<Block*>(entA) : static_cast<Block*>(entB);
+                if (!block->isDestroyed()) {
+                    block->receiveDamage(impact);
+                    if (block->isDestroyed()) score += 50;
+                }
+            }
+            else if ((isPigA && isBlockB) || (isPigB && isBlockA)) {
+                Pig* pig = isPigA ? static_cast<Pig*>(entA) : static_cast<Pig*>(entB);
+                if (!pig->isDead() && impact > 150.0f) {
+                    pig->receiveDamage(impact);
+                    if (pig->isDead()) score += 100;
+                }
+            }
+        }
+    }
+    
+    // Cleanup destroyed bodies from physics world
+    for (auto& pig : pigs) {
+        if (pig->isDead() && pig->getBody().userData != nullptr) {
+            physicsWorld.removeBody(&pig->getBody());
+            pig->getBody().userData = nullptr;
+        }
+    }
+    for (auto& block : blocks) {
+        if (block->isDestroyed() && block->getBody().userData != nullptr) {
+            physicsWorld.removeBody(&block->getBody());
+            block->getBody().userData = nullptr;
+        }
+    }
+    for (auto& bird : activeBirds) {
+        if (ExplosiveBird* eb = dynamic_cast<ExplosiveBird*>(bird.get())) {
+            if (eb->hasExploded() && eb->isActive()) {
+                resolveExplosions(eb);
+                eb->setActive(false);
+                physicsWorld.removeBody(&eb->getBody());
+                eb->getBody().userData = nullptr;
+            }
+        }
+        if (!bird->isActive() && bird->getBody().userData != nullptr) {
+            physicsWorld.removeBody(&bird->getBody());
+            bird->getBody().userData = nullptr;
+        }
+    }
 
     // Only check win/loss if at least one bird has been launched
     if (!activeBirds.empty()) {
@@ -210,101 +267,7 @@ void GameplayState::update(float dt) {
 }
 
 void GameplayState::checkCollisions() {
-    // Bird vs Pig
-    for (auto& bird : activeBirds) {
-        if (!bird->isActive()) continue;
-        
-        // Check if bird is explosive and exploded
-        if (ExplosiveBird* eb = dynamic_cast<ExplosiveBird*>(bird.get())) {
-            if (eb->hasExploded() && eb->isActive()) { // Just exploded
-                resolveExplosions(eb);
-                eb->setActive(false); // only apply explosion once
-                continue;
-            }
-        }
-        
-        for (auto& pig : pigs) {
-            if (!pig->isDead()) {
-                CollisionManifold m = CollisionSystem::circleVsCircle(
-                    bird->getBody(), bird->getRadius(),
-                    pig->getBody(), pig->getRadius()
-                );
-                CollisionSystem::resolveCollision(bird->getBody(), pig->getBody(), m);
-                if (m.isColliding) {
-                    pig->receiveDamage(std::abs(m.impactForce) * 50.0f);
-                    if (pig->isDead()) score += 100;
-                }
-            }
-        }
-        
-        // Bird vs Block
-        for (auto& block : blocks) {
-            if (!block->isDestroyed()) {
-                CollisionManifold m = CollisionSystem::circleVsOBB(
-                    bird->getBody(), bird->getRadius(),
-                    block->getBody(), block->getHalfSize()
-                );
-                CollisionSystem::resolveCollision(bird->getBody(), block->getBody(), m);
-                if (m.isColliding) {
-                    block->receiveDamage(std::abs(m.impactForce));
-                    if (block->isDestroyed()) score += 50;
-                }
-            }
-        }
-    }
-    
-    // Pig vs Block
-    for (auto& pig : pigs) {
-        if (pig->isDead()) continue;
-        for (auto& block : blocks) {
-            if (block->isDestroyed()) continue;
-            
-            CollisionManifold m = CollisionSystem::circleVsOBB(
-                pig->getBody(), pig->getRadius(),
-                block->getBody(), block->getHalfSize()
-            );
-            CollisionSystem::resolveCollision(pig->getBody(), block->getBody(), m);
-            
-            // Allow heavy falling blocks to crush the pig
-            if (m.isColliding) {
-                float impact = std::abs(m.impactForce);
-                // Impact force corresponds to momentum transferred. 
-                // A heavy block falling fast creates a large impulse j.
-                if (impact > 150.0f) { 
-                    pig->receiveDamage(impact);
-                    if (pig->isDead()) score += 100;
-                }
-            }
-        }
-    }
-    
-    // Pig vs Pig
-    for (size_t i = 0; i < pigs.size(); ++i) {
-        if (pigs[i]->isDead()) continue;
-        for (size_t j = i + 1; j < pigs.size(); ++j) {
-            if (pigs[j]->isDead()) continue;
-            
-            CollisionManifold m = CollisionSystem::circleVsCircle(
-                pigs[i]->getBody(), pigs[i]->getRadius(),
-                pigs[j]->getBody(), pigs[j]->getRadius()
-            );
-            CollisionSystem::resolveCollision(pigs[i]->getBody(), pigs[j]->getBody(), m);
-        }
-    }
-    
-    // Block vs Block (Stacking)
-    for (size_t i = 0; i < blocks.size(); ++i) {
-        if (blocks[i]->isDestroyed()) continue;
-        for (size_t j = i + 1; j < blocks.size(); ++j) {
-            if (blocks[j]->isDestroyed()) continue;
-            
-            CollisionManifold m = CollisionSystem::obbVsOBB(
-                blocks[i]->getBody(), blocks[i]->getHalfSize(),
-                blocks[j]->getBody(), blocks[j]->getHalfSize()
-            );
-            CollisionSystem::resolveCollision(blocks[i]->getBody(), blocks[j]->getBody(), m);
-        }
-    }
+    // Deprecated, handled by PhysicsWorld now.
 }
 
 void GameplayState::resolveExplosions(const ExplosiveBird* eb) {

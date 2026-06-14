@@ -36,12 +36,10 @@ void Block::updateTexture() {
 
 void Block::update(float dt) {
     if (is_active && !isDestroyed()) {
-        body.applyForce(sf::Vector2f(0.0f, 100.0f * body.mass)); // Gravity
-        body.integrate(dt);
-        body.velocity.x *= 0.99f; // Light air friction
-        body.angularVelocity *= 0.99f;
+        // Physics is now handled by PhysicsWorld
+        // Just sync the sprite
         sprite.setPosition(body.position);
-        sprite.setRotation(body.rotation * 180.0f / 3.14159265f); // Convert radians to degrees
+        sprite.setRotation(body.rotation * 180.0f / 3.14159f);
     }
 }
 

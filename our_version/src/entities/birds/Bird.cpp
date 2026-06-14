@@ -6,6 +6,7 @@ Bird::Bird(sf::Vector2f pos, float r) : radius(r) {
     body.inertia = 0.5f * body.mass * radius * radius;
     body.restitution = 0.4f;
     body.friction = 0.8f;
+    body.gravityScale = 600.0f / 980.0f;
     body.isStatic = true; // Static until launched
     sprite.setPosition(body.position); // Sync sprite immediately
 }
@@ -20,8 +21,8 @@ void Bird::launch(sf::Vector2f velocity) {
 
 void Bird::update(float dt) {
     if (launched && !body.isStatic) {
-        body.applyForce(sf::Vector2f(0.0f, 600.0f * body.mass)); // Reduced gravity for birds
-        body.integrate(dt);
+        // body.applyForce(sf::Vector2f(0.0f, 600.0f * body.mass)); // Handled by gravityScale
+        // body.integrate(dt);
         
         lifetime += dt;
         if (lifetime > 5.0f) {

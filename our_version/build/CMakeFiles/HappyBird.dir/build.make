@@ -86,11 +86,26 @@ CMakeFiles/HappyBird.dir/src/core/CollisionSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HappyBird.dir/src/core/CollisionSystem.cpp.s"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\hoctap\C++\zombie_bird\our_version\src\core\CollisionSystem.cpp -o CMakeFiles\HappyBird.dir\src\core\CollisionSystem.cpp.s
 
+CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.obj: CMakeFiles/HappyBird.dir/flags.make
+CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
+CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/core/PhysicsWorld.cpp
+CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.obj -MF CMakeFiles\HappyBird.dir\src\core\PhysicsWorld.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\core\PhysicsWorld.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\core\PhysicsWorld.cpp
+
+CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.i"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\hoctap\C++\zombie_bird\our_version\src\core\PhysicsWorld.cpp > CMakeFiles\HappyBird.dir\src\core\PhysicsWorld.cpp.i
+
+CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.s"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\hoctap\C++\zombie_bird\our_version\src\core\PhysicsWorld.cpp -o CMakeFiles\HappyBird.dir\src\core\PhysicsWorld.cpp.s
+
 CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj: CMakeFiles/HappyBird.dir/flags.make
 CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.cpp
 CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj -MF CMakeFiles\HappyBird.dir\src\core\ResourceManager.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\core\ResourceManager.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\core\ResourceManager.cpp
 
 CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.i: cmake_force
@@ -105,7 +120,7 @@ CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj: CMakeFiles/HappyBird.dir/fl
 CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/entities/Block.cpp
 CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj -MF CMakeFiles\HappyBird.dir\src\entities\Block.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\entities\Block.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\entities\Block.cpp
 
 CMakeFiles/HappyBird.dir/src/entities/Block.cpp.i: cmake_force
@@ -120,7 +135,7 @@ CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.obj: CMakeFiles/HappyBird.dir/flag
 CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/entities/Pig.cpp
 CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.obj -MF CMakeFiles\HappyBird.dir\src\entities\Pig.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\entities\Pig.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\entities\Pig.cpp
 
 CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.i: cmake_force
@@ -135,7 +150,7 @@ CMakeFiles/HappyBird.dir/src/entities/birds/BasicBird.cpp.obj: CMakeFiles/HappyB
 CMakeFiles/HappyBird.dir/src/entities/birds/BasicBird.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/entities/birds/BasicBird.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/entities/birds/BasicBird.cpp
 CMakeFiles/HappyBird.dir/src/entities/birds/BasicBird.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HappyBird.dir/src/entities/birds/BasicBird.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/HappyBird.dir/src/entities/birds/BasicBird.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/entities/birds/BasicBird.cpp.obj -MF CMakeFiles\HappyBird.dir\src\entities\birds\BasicBird.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\entities\birds\BasicBird.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\entities\birds\BasicBird.cpp
 
 CMakeFiles/HappyBird.dir/src/entities/birds/BasicBird.cpp.i: cmake_force
@@ -150,7 +165,7 @@ CMakeFiles/HappyBird.dir/src/entities/birds/Bird.cpp.obj: CMakeFiles/HappyBird.d
 CMakeFiles/HappyBird.dir/src/entities/birds/Bird.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/entities/birds/Bird.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/entities/birds/Bird.cpp
 CMakeFiles/HappyBird.dir/src/entities/birds/Bird.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/HappyBird.dir/src/entities/birds/Bird.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/HappyBird.dir/src/entities/birds/Bird.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/entities/birds/Bird.cpp.obj -MF CMakeFiles\HappyBird.dir\src\entities\birds\Bird.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\entities\birds\Bird.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\entities\birds\Bird.cpp
 
 CMakeFiles/HappyBird.dir/src/entities/birds/Bird.cpp.i: cmake_force
@@ -165,7 +180,7 @@ CMakeFiles/HappyBird.dir/src/entities/birds/DashBird.cpp.obj: CMakeFiles/HappyBi
 CMakeFiles/HappyBird.dir/src/entities/birds/DashBird.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/entities/birds/DashBird.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/entities/birds/DashBird.cpp
 CMakeFiles/HappyBird.dir/src/entities/birds/DashBird.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/HappyBird.dir/src/entities/birds/DashBird.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/HappyBird.dir/src/entities/birds/DashBird.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/entities/birds/DashBird.cpp.obj -MF CMakeFiles\HappyBird.dir\src\entities\birds\DashBird.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\entities\birds\DashBird.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\entities\birds\DashBird.cpp
 
 CMakeFiles/HappyBird.dir/src/entities/birds/DashBird.cpp.i: cmake_force
@@ -180,7 +195,7 @@ CMakeFiles/HappyBird.dir/src/entities/birds/ExplosiveBird.cpp.obj: CMakeFiles/Ha
 CMakeFiles/HappyBird.dir/src/entities/birds/ExplosiveBird.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/entities/birds/ExplosiveBird.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/entities/birds/ExplosiveBird.cpp
 CMakeFiles/HappyBird.dir/src/entities/birds/ExplosiveBird.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/HappyBird.dir/src/entities/birds/ExplosiveBird.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/HappyBird.dir/src/entities/birds/ExplosiveBird.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/entities/birds/ExplosiveBird.cpp.obj -MF CMakeFiles\HappyBird.dir\src\entities\birds\ExplosiveBird.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\entities\birds\ExplosiveBird.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\entities\birds\ExplosiveBird.cpp
 
 CMakeFiles/HappyBird.dir/src/entities/birds/ExplosiveBird.cpp.i: cmake_force
@@ -195,7 +210,7 @@ CMakeFiles/HappyBird.dir/src/entities/birds/SplitBird.cpp.obj: CMakeFiles/HappyB
 CMakeFiles/HappyBird.dir/src/entities/birds/SplitBird.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/entities/birds/SplitBird.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/entities/birds/SplitBird.cpp
 CMakeFiles/HappyBird.dir/src/entities/birds/SplitBird.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/HappyBird.dir/src/entities/birds/SplitBird.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/HappyBird.dir/src/entities/birds/SplitBird.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/entities/birds/SplitBird.cpp.obj -MF CMakeFiles\HappyBird.dir\src\entities\birds\SplitBird.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\entities\birds\SplitBird.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\entities\birds\SplitBird.cpp
 
 CMakeFiles/HappyBird.dir/src/entities/birds/SplitBird.cpp.i: cmake_force
@@ -210,7 +225,7 @@ CMakeFiles/HappyBird.dir/src/level/LevelLoader.cpp.obj: CMakeFiles/HappyBird.dir
 CMakeFiles/HappyBird.dir/src/level/LevelLoader.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/level/LevelLoader.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/level/LevelLoader.cpp
 CMakeFiles/HappyBird.dir/src/level/LevelLoader.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/HappyBird.dir/src/level/LevelLoader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/HappyBird.dir/src/level/LevelLoader.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/level/LevelLoader.cpp.obj -MF CMakeFiles\HappyBird.dir\src\level\LevelLoader.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\level\LevelLoader.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\level\LevelLoader.cpp
 
 CMakeFiles/HappyBird.dir/src/level/LevelLoader.cpp.i: cmake_force
@@ -225,7 +240,7 @@ CMakeFiles/HappyBird.dir/src/main.cpp.obj: CMakeFiles/HappyBird.dir/flags.make
 CMakeFiles/HappyBird.dir/src/main.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/main.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/main.cpp
 CMakeFiles/HappyBird.dir/src/main.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/HappyBird.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/HappyBird.dir/src/main.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/main.cpp.obj -MF CMakeFiles\HappyBird.dir\src\main.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\main.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\main.cpp
 
 CMakeFiles/HappyBird.dir/src/main.cpp.i: cmake_force
@@ -240,7 +255,7 @@ CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.obj: CMakeFiles/HappyBird.
 CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/states/GameplayState.cpp
 CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.obj -MF CMakeFiles\HappyBird.dir\src\states\GameplayState.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\states\GameplayState.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\states\GameplayState.cpp
 
 CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.i: cmake_force
@@ -255,7 +270,7 @@ CMakeFiles/HappyBird.dir/src/states/LevelSelectState.cpp.obj: CMakeFiles/HappyBi
 CMakeFiles/HappyBird.dir/src/states/LevelSelectState.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/states/LevelSelectState.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/states/LevelSelectState.cpp
 CMakeFiles/HappyBird.dir/src/states/LevelSelectState.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/HappyBird.dir/src/states/LevelSelectState.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/HappyBird.dir/src/states/LevelSelectState.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/states/LevelSelectState.cpp.obj -MF CMakeFiles\HappyBird.dir\src\states\LevelSelectState.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\states\LevelSelectState.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\states\LevelSelectState.cpp
 
 CMakeFiles/HappyBird.dir/src/states/LevelSelectState.cpp.i: cmake_force
@@ -270,7 +285,7 @@ CMakeFiles/HappyBird.dir/src/states/LoseState.cpp.obj: CMakeFiles/HappyBird.dir/
 CMakeFiles/HappyBird.dir/src/states/LoseState.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/states/LoseState.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/states/LoseState.cpp
 CMakeFiles/HappyBird.dir/src/states/LoseState.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/HappyBird.dir/src/states/LoseState.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/HappyBird.dir/src/states/LoseState.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/states/LoseState.cpp.obj -MF CMakeFiles\HappyBird.dir\src\states\LoseState.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\states\LoseState.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\states\LoseState.cpp
 
 CMakeFiles/HappyBird.dir/src/states/LoseState.cpp.i: cmake_force
@@ -285,7 +300,7 @@ CMakeFiles/HappyBird.dir/src/states/MainMenuState.cpp.obj: CMakeFiles/HappyBird.
 CMakeFiles/HappyBird.dir/src/states/MainMenuState.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/states/MainMenuState.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/states/MainMenuState.cpp
 CMakeFiles/HappyBird.dir/src/states/MainMenuState.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/HappyBird.dir/src/states/MainMenuState.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/HappyBird.dir/src/states/MainMenuState.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/states/MainMenuState.cpp.obj -MF CMakeFiles\HappyBird.dir\src\states\MainMenuState.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\states\MainMenuState.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\states\MainMenuState.cpp
 
 CMakeFiles/HappyBird.dir/src/states/MainMenuState.cpp.i: cmake_force
@@ -300,7 +315,7 @@ CMakeFiles/HappyBird.dir/src/states/StateManager.cpp.obj: CMakeFiles/HappyBird.d
 CMakeFiles/HappyBird.dir/src/states/StateManager.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/states/StateManager.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/states/StateManager.cpp
 CMakeFiles/HappyBird.dir/src/states/StateManager.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/HappyBird.dir/src/states/StateManager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/HappyBird.dir/src/states/StateManager.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/states/StateManager.cpp.obj -MF CMakeFiles\HappyBird.dir\src\states\StateManager.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\states\StateManager.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\states\StateManager.cpp
 
 CMakeFiles/HappyBird.dir/src/states/StateManager.cpp.i: cmake_force
@@ -315,7 +330,7 @@ CMakeFiles/HappyBird.dir/src/states/WinState.cpp.obj: CMakeFiles/HappyBird.dir/f
 CMakeFiles/HappyBird.dir/src/states/WinState.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/states/WinState.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/states/WinState.cpp
 CMakeFiles/HappyBird.dir/src/states/WinState.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/HappyBird.dir/src/states/WinState.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/HappyBird.dir/src/states/WinState.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/states/WinState.cpp.obj -MF CMakeFiles\HappyBird.dir\src\states\WinState.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\states\WinState.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\states\WinState.cpp
 
 CMakeFiles/HappyBird.dir/src/states/WinState.cpp.i: cmake_force
@@ -330,7 +345,7 @@ CMakeFiles/HappyBird.dir/src/ui/Slingshot.cpp.obj: CMakeFiles/HappyBird.dir/flag
 CMakeFiles/HappyBird.dir/src/ui/Slingshot.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/ui/Slingshot.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/ui/Slingshot.cpp
 CMakeFiles/HappyBird.dir/src/ui/Slingshot.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/HappyBird.dir/src/ui/Slingshot.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/HappyBird.dir/src/ui/Slingshot.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/ui/Slingshot.cpp.obj -MF CMakeFiles\HappyBird.dir\src\ui\Slingshot.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\ui\Slingshot.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\ui\Slingshot.cpp
 
 CMakeFiles/HappyBird.dir/src/ui/Slingshot.cpp.i: cmake_force
@@ -345,7 +360,7 @@ CMakeFiles/HappyBird.dir/src/ui/TrajectoryLine.cpp.obj: CMakeFiles/HappyBird.dir
 CMakeFiles/HappyBird.dir/src/ui/TrajectoryLine.cpp.obj: CMakeFiles/HappyBird.dir/includes_CXX.rsp
 CMakeFiles/HappyBird.dir/src/ui/TrajectoryLine.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/ui/TrajectoryLine.cpp
 CMakeFiles/HappyBird.dir/src/ui/TrajectoryLine.cpp.obj: CMakeFiles/HappyBird.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/HappyBird.dir/src/ui/TrajectoryLine.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/HappyBird.dir/src/ui/TrajectoryLine.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HappyBird.dir/src/ui/TrajectoryLine.cpp.obj -MF CMakeFiles\HappyBird.dir\src\ui\TrajectoryLine.cpp.obj.d -o CMakeFiles\HappyBird.dir\src\ui\TrajectoryLine.cpp.obj -c C:\hoctap\C++\zombie_bird\our_version\src\ui\TrajectoryLine.cpp
 
 CMakeFiles/HappyBird.dir/src/ui/TrajectoryLine.cpp.i: cmake_force
@@ -359,6 +374,7 @@ CMakeFiles/HappyBird.dir/src/ui/TrajectoryLine.cpp.s: cmake_force
 # Object files for target HappyBird
 HappyBird_OBJECTS = \
 "CMakeFiles/HappyBird.dir/src/core/CollisionSystem.cpp.obj" \
+"CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.obj" \
 "CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj" \
 "CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj" \
 "CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.obj" \
@@ -382,6 +398,7 @@ HappyBird_OBJECTS = \
 HappyBird_EXTERNAL_OBJECTS =
 
 HappyBird.exe: CMakeFiles/HappyBird.dir/src/core/CollisionSystem.cpp.obj
+HappyBird.exe: CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.obj
 HappyBird.exe: CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj
 HappyBird.exe: CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj
 HappyBird.exe: CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.obj
@@ -408,7 +425,7 @@ HappyBird.exe: C:/msys64/ucrt64/lib/libsfml-system.dll.a
 HappyBird.exe: CMakeFiles/HappyBird.dir/linkLibs.rsp
 HappyBird.exe: CMakeFiles/HappyBird.dir/objects1.rsp
 HappyBird.exe: CMakeFiles/HappyBird.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable HappyBird.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable HappyBird.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\HappyBird.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

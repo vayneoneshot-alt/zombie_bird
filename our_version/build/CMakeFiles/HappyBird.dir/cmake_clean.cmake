@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/HappyBird.dir/src/core/CollisionSystem.cpp.obj"
   "CMakeFiles/HappyBird.dir/src/core/CollisionSystem.cpp.obj.d"
+  "CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.obj"
+  "CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.obj.d"
   "CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj"
   "CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj.d"
   "CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj"

@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/hoctap/C++/zombie_bird/our_version/src/core/CollisionSystem.cpp" "CMakeFiles/HappyBird.dir/src/core/CollisionSystem.cpp.obj" "gcc" "CMakeFiles/HappyBird.dir/src/core/CollisionSystem.cpp.obj.d"
+  "C:/hoctap/C++/zombie_bird/our_version/src/core/PhysicsWorld.cpp" "CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.obj" "gcc" "CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.obj.d"
   "C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.cpp" "CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj" "gcc" "CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj.d"
   "C:/hoctap/C++/zombie_bird/our_version/src/entities/Block.cpp" "CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj" "gcc" "CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj.d"
   "C:/hoctap/C++/zombie_bird/our_version/src/entities/Pig.cpp" "CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.obj" "gcc" "CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.obj.d"
