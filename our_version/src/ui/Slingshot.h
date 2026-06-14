@@ -2,7 +2,7 @@
 #define SLINGSHOT_H
 
 #include <SFML/Graphics.hpp>
-#include "../../core/ResourceManager.h"
+#include "../core/ResourceManager.h"
 
 class Slingshot {
 public:

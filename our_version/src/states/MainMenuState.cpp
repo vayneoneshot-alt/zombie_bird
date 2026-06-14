@@ -1,6 +1,7 @@
 #include "MainMenuState.h"
 #include "LevelSelectState.h"
 #include <iostream>
+#include <cmath>
 
 MainMenuState::MainMenuState(StateManager& sm, sf::RenderWindow& window)
     : stateManager(sm), window(window) {}

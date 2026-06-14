@@ -1,8 +1,8 @@
 #ifndef PIG_H
 #define PIG_H
 
-#include "../Entity.h"
-#include "../../core/ResourceManager.h"
+#include "Entity.h"
+#include "../core/ResourceManager.h"
 
 class Pig : public Entity {
 public:

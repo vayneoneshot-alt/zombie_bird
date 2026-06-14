@@ -1,4 +1,5 @@
 #include "LevelSelectState.h"
+#include "GameplayState.h"
 #include <iostream>
 
 LevelSelectState::LevelSelectState(StateManager& sm, sf::RenderWindow& window)
@@ -60,7 +61,7 @@ void LevelSelectState::handleEvent(const sf::Event& e) {
         for (const auto& btn : buttons) {
             if (btn.rect.getGlobalBounds().contains(mousePos)) {
                 std::cout << "Loading " << btn.levelFile << "\n";
-                // Transition to GameplayState here later
+                stateManager.changeState(std::make_unique<GameplayState>(stateManager, window, btn.levelFile));
             }
         }
     }

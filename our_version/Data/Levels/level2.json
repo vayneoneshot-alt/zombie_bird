@@ -1,0 +1,15 @@
+{
+  "name": "Stormy Heights",
+  "background": "lvl2",
+  "birds": ["dash", "explosive", "basic", "split", "basic"],
+  "pigs": [
+    { "x": 850, "y": 400 },
+    { "x": 1000, "y": 300 },
+    { "x": 1100, "y": 580 }
+  ],
+  "blocks": [
+    { "type": "wood", "x": 850, "y": 450, "w": 70, "h": 70 },
+    { "type": "wood", "x": 1000, "y": 350, "w": 70, "h": 70 },
+    { "type": "wood", "x": 1100, "y": 630, "w": 70, "h": 70 }
+  ]
+}

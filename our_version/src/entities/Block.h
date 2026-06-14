@@ -1,8 +1,8 @@
 #ifndef BLOCK_H
 #define BLOCK_H
 
-#include "../Entity.h"
-#include "../../core/ResourceManager.h"
+#include "Entity.h"
+#include "../core/ResourceManager.h"
 
 class Block : public Entity {
 public:
