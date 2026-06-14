@@ -37,9 +37,16 @@ void GameplayState::loadLevel() {
     sf::Vector2u winSize = window.getSize();
     background.setScale((float)winSize.x / texSize.x, (float)winSize.y / texSize.y);
 
-    // Load Birds
+    // Load Birds — queue birds sit at the bottom-left waiting area
+    int queueIndex = 0;
     for (const auto& birdType : levelData.birds) {
-        sf::Vector2f pos(100.0f - birdQueue.size() * 30.0f, winSize.y - 50.0f);
+        // First bird goes to slingshot; rest sit on the ground waiting
+        sf::Vector2f pos;
+        if (queueIndex == 0) {
+            pos = slingshot->getPullPosition();
+        } else {
+            pos = sf::Vector2f(60.0f + (queueIndex - 1) * 55.0f, winSize.y - 60.0f);
+        }
         if (birdType == "dash") {
             birdQueue.push_back(std::make_unique<DashBird>(pos));
         } else if (birdType == "explosive") {
@@ -49,11 +56,12 @@ void GameplayState::loadLevel() {
         } else {
             birdQueue.push_back(std::make_unique<BasicBird>(pos));
         }
+        queueIndex++;
     }
-    
-    // Move first bird to slingshot
+    // Sync first bird sprite to slingshot position (body is already set above)
     if (!birdQueue.empty()) {
         birdQueue.front()->getBody().position = slingshot->getPullPosition();
+        birdQueue.front()->getSprite().setPosition(slingshot->getPullPosition());
     }
     
     // Load Pigs
@@ -75,12 +83,22 @@ void GameplayState::onExit() {
 }
 
 void GameplayState::handleEvent(const sf::Event& e) {
+    bool hasActiveFlying = false;
+    for (const auto& b : activeBirds) {
+        if (b->isActive()) hasActiveFlying = true;
+    }
+
     if (e.type == sf::Event::MouseButtonPressed && e.mouseButton.button == sf::Mouse::Left) {
         sf::Vector2f mousePos(e.mouseButton.x, e.mouseButton.y);
         
         // Use bird ability if we click and a bird is already flying
-        if (!activeBirds.empty()) {
-            activeBirds.back()->onAbility();
+        if (hasActiveFlying) {
+            for (auto it = activeBirds.rbegin(); it != activeBirds.rend(); ++it) {
+                if ((*it)->isActive()) {
+                    (*it)->onAbility();
+                    break;
+                }
+            }
         } else if (!birdQueue.empty()) {
             slingshot->onMousePress(mousePos);
         }
@@ -90,17 +108,21 @@ void GameplayState::handleEvent(const sf::Event& e) {
         slingshot->onMouseMove(mousePos);
     }
     else if (e.type == sf::Event::MouseButtonReleased && e.mouseButton.button == sf::Mouse::Left) {
-        if (slingshot->onMouseRelease() && !birdQueue.empty()) {
+        if (slingshot->isDragging() && !birdQueue.empty()) {
+            sf::Vector2f launchVel = slingshot->getLaunchVelocity();
+            slingshot->onMouseRelease();
+            
             auto bird = std::move(birdQueue.front());
             birdQueue.pop_front();
             
-            sf::Vector2f launchVel = slingshot->getLaunchVelocity();
             bird->launch(launchVel);
             activeBirds.push_back(std::move(bird));
             
             // Move next bird to slingshot (if any)
             if (!birdQueue.empty()) {
-                birdQueue.front()->getBody().position = sf::Vector2f(250.0f, window.getSize().y - 200.0f);
+                sf::Vector2f slingshotPos = slingshot->getPullPosition();
+                birdQueue.front()->getBody().position = slingshotPos;
+                birdQueue.front()->getSprite().setPosition(slingshotPos);
             }
         }
     }
@@ -118,7 +140,9 @@ void GameplayState::update(float dt) {
 
     // Update Slingshot position tracking for current bird
     if (slingshot->isDragging() && !birdQueue.empty()) {
-        birdQueue.front()->getBody().position = slingshot->getPullPosition();
+        sf::Vector2f pullPos = slingshot->getPullPosition();
+        birdQueue.front()->getBody().position = pullPos;
+        birdQueue.front()->getSprite().setPosition(pullPos);
     }
 
     // SplitBird child spawning check
@@ -164,7 +188,11 @@ void GameplayState::update(float dt) {
     }
 
     checkCollisions();
-    checkWinLoss();
+
+    // Only check win/loss if at least one bird has been launched
+    if (!activeBirds.empty()) {
+        checkWinLoss();
+    }
 
     scoreText.setString("Score: " + std::to_string(score));
 }
@@ -210,6 +238,34 @@ void GameplayState::checkCollisions() {
                     if (block->isDestroyed()) score += 50;
                 }
             }
+        }
+    }
+    
+    // Pig vs Block
+    for (auto& pig : pigs) {
+        if (pig->isDead()) continue;
+        for (auto& block : blocks) {
+            if (block->isDestroyed()) continue;
+            
+            CollisionManifold m = CollisionSystem::circleVsAABB(
+                pig->getBody(), pig->getRadius(),
+                block->getBody(), block->getHalfSize()
+            );
+            CollisionSystem::resolveCollision(pig->getBody(), block->getBody(), m);
+        }
+    }
+    
+    // Pig vs Pig
+    for (size_t i = 0; i < pigs.size(); ++i) {
+        if (pigs[i]->isDead()) continue;
+        for (size_t j = i + 1; j < pigs.size(); ++j) {
+            if (pigs[j]->isDead()) continue;
+            
+            CollisionManifold m = CollisionSystem::circleVsCircle(
+                pigs[i]->getBody(), pigs[i]->getRadius(),
+                pigs[j]->getBody(), pigs[j]->getRadius()
+            );
+            CollisionSystem::resolveCollision(pigs[i]->getBody(), pigs[j]->getBody(), m);
         }
     }
     
@@ -274,8 +330,7 @@ void GameplayState::checkWinLoss() {
         bool outOfBirds = birdQueue.empty();
         bool allBirdsStopped = true;
         for (const auto& bird : activeBirds) {
-            float speed = std::abs(bird->getBody().velocity.x) + std::abs(bird->getBody().velocity.y);
-            if (speed > 10.0f || bird->isActive()) {
+            if (bird->isActive()) {
                 allBirdsStopped = false;
                 break;
             }

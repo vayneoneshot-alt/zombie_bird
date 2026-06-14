@@ -63,10 +63,15 @@ CollisionManifold CollisionSystem::circleVsAABB(const PhysicsBody& circle, float
     
     m.isColliding = true;
     if (inside) {
-        m.normal = -normal / distance;
-        m.penetration = radius - distance;
-    } else {
+        m.normal = normal / distance; // Points from box towards circle center (inside). We want A to B, A is circle, B is box, so from circle to box is roughly -normal? Wait. normal points outwards towards the circle center which is deeper inside. This points from boundary to deeper inside. So from B to A. We want A to B!
+        // No wait, if inside, n=circle-box. closest is on boundary. normal = n - closest. This points from boundary to circle center (which is further inside). So it points INWARDS towards box center.
+        // If normal points INWARDS towards box center, it points from Circle to Box!
         m.normal = normal / distance;
+        m.penetration = radius + distance;
+    } else {
+        // normal = n - closest. Points from boundary to circle center. So from Box to Circle.
+        // We want normal from Circle to Box!
+        m.normal = -normal / distance;
         m.penetration = radius - distance;
     }
     

@@ -22,6 +22,7 @@ protected:
     bool launched = false;
     bool abilityUsed = false;
     float radius;
+    float lifetime = 0.0f; // Track how long the bird has been flying
 };
 
 #endif // BIRD_H

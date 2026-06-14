@@ -30,7 +30,7 @@ private:
     sf::VertexArray bandLeft;
     sf::VertexArray bandRight;
 
-    static constexpr float LAUNCH_POWER_SCALE = 12.0f;
+    static constexpr float LAUNCH_POWER_SCALE = 3.0f;
     
     void updateBands();
 };

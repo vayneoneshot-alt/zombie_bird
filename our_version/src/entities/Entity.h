@@ -20,6 +20,8 @@ public:
     
     PhysicsBody& getBody() { return body; }
     const PhysicsBody& getBody() const { return body; }
+    
+    sf::Sprite& getSprite() { return sprite; }
 
 protected:
     sf::Sprite sprite;
