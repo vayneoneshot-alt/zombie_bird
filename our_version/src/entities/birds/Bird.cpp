@@ -2,19 +2,19 @@
 
 Bird::Bird(sf::Vector2f pos, float r) : radius(r) {
     body.position = pos;
-    body.mass = 1.0f;
-    body.inertia = 0.5f * body.mass * radius * radius;
+    body.setMass(1.0f);
+    body.setInertia(0.5f * body.mass * radius * radius);
     body.restitution = 0.4f;
     body.friction = 0.8f;
     body.gravityScale = 600.0f / 980.0f;
-    body.isStatic = true; // Static until launched
+    body.setStatic(true); // Correctly zeros invMass and invInertia while on slingshot
     sprite.setPosition(body.position); // Sync sprite immediately
 }
 
 void Bird::launch(sf::Vector2f velocity) {
     if (!launched) {
         launched = true;
-        body.isStatic = false;
+        body.setStatic(false); // Restores invMass = 1/mass, invInertia = 1/inertia
         body.velocity = velocity;
     }
 }

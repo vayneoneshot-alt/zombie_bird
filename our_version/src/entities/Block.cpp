@@ -4,11 +4,11 @@ Block::Block(sf::Vector2f pos, sf::Vector2f size, Material mat)
     : material(mat), halfSize(size / 2.0f) {
     
     body.position = pos;
-    body.mass = 2.0f;
-    body.inertia = body.mass * (size.x * size.x + size.y * size.y) / 12.0f;
+    body.setMass(2.0f);
+    body.setInertia(body.mass * (size.x * size.x + size.y * size.y) / 12.0f);
     body.restitution = 0.1f;
-    body.friction = 20.0f; // Very high friction to prevent sliding
-    body.isStatic = false;
+    body.friction = 0.8f;
+    body.setStatic(false);
     
     maxHealth = 200.0f; // Threshold for breaking
     health = maxHealth;

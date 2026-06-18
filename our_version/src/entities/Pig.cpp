@@ -7,17 +7,17 @@ Pig::Pig(sf::Vector2f pos) {
     sf::FloatRect bounds = sprite.getLocalBounds();
     sprite.setOrigin(bounds.width / 2.0f, bounds.height / 2.0f);
     
-    // Auto scale to radius 20.0f
-    float targetRadius = 20.0f;
+    // Auto scale to radius 17.5f
+    float targetRadius = 17.5f;
     sprite.setScale(targetRadius * 2.0f / bounds.width, targetRadius * 2.0f / bounds.height);
     radius = targetRadius;
     
     body.position = pos;
-    body.mass = 1.5f;
-    body.inertia = 0.5f * body.mass * radius * radius;
+    body.setMass(1.5f);
+    body.setInertia(0.5f * body.mass * radius * radius);
     body.restitution = 0.3f;
     body.friction = 0.8f;
-    body.isStatic = false;
+    body.setStatic(false);
     
     sprite.setPosition(body.position);
 }
