@@ -84,6 +84,20 @@ void GameplayState::loadLevel() {
         physicsWorld.addBody(&block->getBody());
         blocks.push_back(std::move(block));
     }
+    
+    // Pre-settle physics so the structure is stable before gameplay begins.
+    // Discard any collision events (so no damage is dealt during settling).
+    for (int i = 0; i < 100; ++i) {
+        physicsWorld.step(1.0f / 60.0f, 10);
+    }
+    
+    // Sync sprites to the settled physics positions
+    for (auto& pig : pigs) {
+        pig->update(0.0f);
+    }
+    for (auto& block : blocks) {
+        block->update(0.0f);
+    }
 }
 
 void GameplayState::onExit() {
