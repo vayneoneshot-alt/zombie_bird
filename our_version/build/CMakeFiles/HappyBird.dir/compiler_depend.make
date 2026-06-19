@@ -8,23 +8,6 @@ CMakeFiles/HappyBird.dir/src/core/CollisionSystem.cpp.obj: C:/hoctap/C++/zombie_
   C:/hoctap/C++/zombie_bird/our_version/src/entities/Entity.h \
   C:/hoctap/C++/zombie_bird/our_version/src/entities/Pig.h \
   C:/hoctap/C++/zombie_bird/our_version/src/entities/birds/Bird.h \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -181,10 +164,8 @@ CMakeFiles/HappyBird.dir/src/core/CollisionSystem.cpp.obj: C:/hoctap/C++/zombie_
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -239,7 +220,6 @@ CMakeFiles/HappyBird.dir/src/core/CollisionSystem.cpp.obj: C:/hoctap/C++/zombie_
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -591,23 +571,6 @@ CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.obj: C:/hoctap/C++/zombie_bir
   C:/hoctap/C++/zombie_bird/our_version/src/core/PhysicsWorld.h
 
 CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.cpp \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -755,9 +718,7 @@ CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj: C:/hoctap/C++/zombie_
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -806,7 +767,6 @@ CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj: C:/hoctap/C++/zombie_
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/execution_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -876,23 +836,6 @@ CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj: C:/hoctap/C++/zombie_
 CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/entities/Block.cpp \
   C:/hoctap/C++/zombie_bird/our_version/src/core/PhysicsBody.h \
   C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -1048,10 +991,8 @@ CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj: C:/hoctap/C++/zombie_bird/o
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -1104,7 +1045,6 @@ CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj: C:/hoctap/C++/zombie_bird/o
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -1175,23 +1115,6 @@ CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj: C:/hoctap/C++/zombie_bird/o
 CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/entities/Pig.cpp \
   C:/hoctap/C++/zombie_bird/our_version/src/core/PhysicsBody.h \
   C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -1347,10 +1270,8 @@ CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.obj: C:/hoctap/C++/zombie_bird/our
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -1403,7 +1324,6 @@ CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.obj: C:/hoctap/C++/zombie_bird/our
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -1475,23 +1395,6 @@ CMakeFiles/HappyBird.dir/src/entities/birds/BasicBird.cpp.obj: C:/hoctap/C++/zom
   C:/hoctap/C++/zombie_bird/our_version/src/core/PhysicsBody.h \
   C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h \
   C:/hoctap/C++/zombie_bird/our_version/src/entities/Entity.h \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -1647,10 +1550,8 @@ CMakeFiles/HappyBird.dir/src/entities/birds/BasicBird.cpp.obj: C:/hoctap/C++/zom
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -1703,7 +1604,6 @@ CMakeFiles/HappyBird.dir/src/entities/birds/BasicBird.cpp.obj: C:/hoctap/C++/zom
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -1775,23 +1675,6 @@ CMakeFiles/HappyBird.dir/src/entities/birds/Bird.cpp.obj: C:/hoctap/C++/zombie_b
   C:/hoctap/C++/zombie_bird/our_version/src/core/PhysicsBody.h \
   C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h \
   C:/hoctap/C++/zombie_bird/our_version/src/entities/Entity.h \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -1947,10 +1830,8 @@ CMakeFiles/HappyBird.dir/src/entities/birds/Bird.cpp.obj: C:/hoctap/C++/zombie_b
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -2003,7 +1884,6 @@ CMakeFiles/HappyBird.dir/src/entities/birds/Bird.cpp.obj: C:/hoctap/C++/zombie_b
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -2074,23 +1954,6 @@ CMakeFiles/HappyBird.dir/src/entities/birds/DashBird.cpp.obj: C:/hoctap/C++/zomb
   C:/hoctap/C++/zombie_bird/our_version/src/core/PhysicsBody.h \
   C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h \
   C:/hoctap/C++/zombie_bird/our_version/src/entities/Entity.h \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -2247,10 +2110,8 @@ CMakeFiles/HappyBird.dir/src/entities/birds/DashBird.cpp.obj: C:/hoctap/C++/zomb
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -2305,7 +2166,6 @@ CMakeFiles/HappyBird.dir/src/entities/birds/DashBird.cpp.obj: C:/hoctap/C++/zomb
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -2390,23 +2250,6 @@ CMakeFiles/HappyBird.dir/src/entities/birds/ExplosiveBird.cpp.obj: C:/hoctap/C++
   C:/hoctap/C++/zombie_bird/our_version/src/core/PhysicsBody.h \
   C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h \
   C:/hoctap/C++/zombie_bird/our_version/src/entities/Entity.h \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -2562,10 +2405,8 @@ CMakeFiles/HappyBird.dir/src/entities/birds/ExplosiveBird.cpp.obj: C:/hoctap/C++
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -2618,7 +2459,6 @@ CMakeFiles/HappyBird.dir/src/entities/birds/ExplosiveBird.cpp.obj: C:/hoctap/C++
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -2690,23 +2530,6 @@ CMakeFiles/HappyBird.dir/src/entities/birds/SplitBird.cpp.obj: C:/hoctap/C++/zom
   C:/hoctap/C++/zombie_bird/our_version/src/core/PhysicsBody.h \
   C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h \
   C:/hoctap/C++/zombie_bird/our_version/src/entities/Entity.h \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -2863,10 +2686,8 @@ CMakeFiles/HappyBird.dir/src/entities/birds/SplitBird.cpp.obj: C:/hoctap/C++/zom
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -2921,7 +2742,6 @@ CMakeFiles/HappyBird.dir/src/entities/birds/SplitBird.cpp.obj: C:/hoctap/C++/zom
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -3269,23 +3089,6 @@ CMakeFiles/HappyBird.dir/src/level/LevelLoader.cpp.obj: C:/hoctap/C++/zombie_bir
 
 CMakeFiles/HappyBird.dir/src/main.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/main.cpp \
   C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -3441,10 +3244,8 @@ CMakeFiles/HappyBird.dir/src/main.cpp.obj: C:/hoctap/C++/zombie_bird/our_version
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -3497,7 +3298,6 @@ CMakeFiles/HappyBird.dir/src/main.cpp.obj: C:/hoctap/C++/zombie_bird/our_version
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -3583,23 +3383,6 @@ CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.obj: C:/hoctap/C++/zombie_
   C:/hoctap/C++/zombie_bird/our_version/src/level/LevelLoader.h \
   C:/hoctap/C++/zombie_bird/our_version/src/ui/Slingshot.h \
   C:/hoctap/C++/zombie_bird/our_version/src/ui/TrajectoryLine.h \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -3758,10 +3541,8 @@ CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.obj: C:/hoctap/C++/zombie_
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -3817,7 +3598,6 @@ CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.obj: C:/hoctap/C++/zombie_
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -3916,23 +3696,6 @@ CMakeFiles/HappyBird.dir/src/states/LevelSelectState.cpp.obj: C:/hoctap/C++/zomb
   C:/hoctap/C++/zombie_bird/our_version/src/level/LevelLoader.h \
   C:/hoctap/C++/zombie_bird/our_version/src/ui/Slingshot.h \
   C:/hoctap/C++/zombie_bird/our_version/src/ui/TrajectoryLine.h \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -4090,10 +3853,8 @@ CMakeFiles/HappyBird.dir/src/states/LevelSelectState.cpp.obj: C:/hoctap/C++/zomb
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -4147,7 +3908,6 @@ CMakeFiles/HappyBird.dir/src/states/LevelSelectState.cpp.obj: C:/hoctap/C++/zomb
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -4219,23 +3979,6 @@ CMakeFiles/HappyBird.dir/src/states/LevelSelectState.cpp.obj: C:/hoctap/C++/zomb
 
 CMakeFiles/HappyBird.dir/src/states/LoseState.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/states/LoseState.cpp \
   C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -4391,10 +4134,8 @@ CMakeFiles/HappyBird.dir/src/states/LoseState.cpp.obj: C:/hoctap/C++/zombie_bird
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -4447,7 +4188,6 @@ CMakeFiles/HappyBird.dir/src/states/LoseState.cpp.obj: C:/hoctap/C++/zombie_bird
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -4519,23 +4259,6 @@ CMakeFiles/HappyBird.dir/src/states/LoseState.cpp.obj: C:/hoctap/C++/zombie_bird
 
 CMakeFiles/HappyBird.dir/src/states/MainMenuState.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/states/MainMenuState.cpp \
   C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -4692,10 +4415,8 @@ CMakeFiles/HappyBird.dir/src/states/MainMenuState.cpp.obj: C:/hoctap/C++/zombie_
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -4750,7 +4471,6 @@ CMakeFiles/HappyBird.dir/src/states/MainMenuState.cpp.obj: C:/hoctap/C++/zombie_
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -5104,23 +4824,6 @@ CMakeFiles/HappyBird.dir/src/states/StateManager.cpp.obj: C:/hoctap/C++/zombie_b
 
 CMakeFiles/HappyBird.dir/src/states/WinState.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/states/WinState.cpp \
   C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -5276,10 +4979,8 @@ CMakeFiles/HappyBird.dir/src/states/WinState.cpp.obj: C:/hoctap/C++/zombie_bird/
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -5332,7 +5033,6 @@ CMakeFiles/HappyBird.dir/src/states/WinState.cpp.obj: C:/hoctap/C++/zombie_bird/
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -5404,23 +5104,6 @@ CMakeFiles/HappyBird.dir/src/states/WinState.cpp.obj: C:/hoctap/C++/zombie_bird/
 
 CMakeFiles/HappyBird.dir/src/ui/Slingshot.cpp.obj: C:/hoctap/C++/zombie_bird/our_version/src/ui/Slingshot.cpp \
   C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h \
-  C:/msys64/ucrt64/include/SFML/Audio.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
-  C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
   C:/msys64/ucrt64/include/SFML/Config.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics.hpp \
   C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
@@ -5569,9 +5252,7 @@ CMakeFiles/HappyBird.dir/src/ui/Slingshot.cpp.obj: C:/hoctap/C++/zombie_bird/our
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_types.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_map.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
   C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_uninitialized.h \
@@ -5622,7 +5303,6 @@ CMakeFiles/HappyBird.dir/src/ui/Slingshot.cpp.obj: C:/hoctap/C++/zombie_bird/our
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/execution_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/15.2.0/set \
   C:/msys64/ucrt64/include/c++/15.2.0/stdexcept \
   C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h \
   C:/msys64/ucrt64/include/c++/15.2.0/streambuf \
@@ -5988,6 +5668,8 @@ C:/msys64/ucrt64/include/c++/15.2.0/ratio:
 
 C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_numeric_defs.h:
 
+C:/msys64/ucrt64/include/c++/15.2.0/iomanip:
+
 C:/msys64/ucrt64/include/c++/15.2.0/functional:
 
 C:/msys64/ucrt64/include/c++/15.2.0/fstream:
@@ -6024,6 +5706,8 @@ C:/msys64/ucrt64/include/c++/15.2.0/bits/fs_dir.h:
 
 C:/msys64/ucrt64/include/c++/15.2.0/bits/chrono.h:
 
+C:/msys64/ucrt64/include/c++/15.2.0/array:
+
 C:/msys64/ucrt64/include/c++/15.2.0/any:
 
 C:/hoctap/C++/zombie_bird/our_version/src/entities/birds/SplitBird.h:
@@ -6058,6 +5742,8 @@ C:/msys64/ucrt64/include/wctype.h:
 
 C:/msys64/ucrt64/include/vadefs.h:
 
+C:/msys64/ucrt64/include/stdlib.h:
+
 C:/msys64/ucrt64/include/stdio.h:
 
 C:/msys64/ucrt64/include/stddef.h:
@@ -6080,6 +5766,8 @@ C:/msys64/ucrt64/include/pthread_signal.h:
 
 C:/msys64/ucrt64/include/pthread_compat.h:
 
+C:/msys64/ucrt64/include/process.h:
+
 C:/msys64/ucrt64/include/c++/15.2.0/bits/fs_fwd.h:
 
 C:/msys64/ucrt64/include/math.h:
@@ -6092,35 +5780,21 @@ C:/msys64/ucrt64/include/limits.h:
 
 C:/msys64/ucrt64/include/corecrt_stdio_config.h:
 
-C:/msys64/ucrt64/include/corecrt_startup.h:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/locale_conv.h:
 
-C:/msys64/ucrt64/include/corecrt.h:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/exception_ptr.h:
 
-C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/time_members.h:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/hashtable_policy.h:
 
-C:/hoctap/C++/zombie_bird/our_version/src/ui/Slingshot.cpp:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/erase_if.h:
 
-C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/messages_members.h:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/uses_allocator_args.h:
 
-C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/invoke.h:
 
-C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/error_constants.h:
+C:/msys64/ucrt64/include/SFML/Graphics/Color.hpp:
 
-C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_base.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/cpu_defines.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++locale.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/vector:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/gslice_array.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/unordered_map:
-
-C:/hoctap/C++/zombie_bird/our_version/src/states/WinState.cpp:
-
-C:/msys64/ucrt64/include/c++/15.2.0/tuple:
+C:/msys64/ucrt64/include/c++/15.2.0/tr1/poly_hermite.tcc:
 
 C:/msys64/ucrt64/include/c++/15.2.0/bits/cxxabi_forced.h:
 
@@ -6142,6 +5816,8 @@ C:/msys64/ucrt64/include/c++/15.2.0/bits/charconv.h:
 
 C:/msys64/ucrt64/include/c++/15.2.0/bits/char_traits.h:
 
+C:/msys64/ucrt64/include/c++/15.2.0/bits/basic_ios.h:
+
 C:/msys64/ucrt64/include/c++/15.2.0/bits/atomic_lockfree_defines.h:
 
 C:/msys64/ucrt64/include/SFML/System/FileInputStream.hpp:
@@ -6152,6 +5828,10 @@ C:/msys64/ucrt64/include/c++/15.2.0/bits/align.h:
 
 C:/msys64/ucrt64/include/c++/15.2.0/initializer_list:
 
+C:/msys64/ucrt64/include/c++/15.2.0/bits/functional_hash.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/functexcept.h:
+
 C:/msys64/ucrt64/include/_mingw_secapi.h:
 
 C:/hoctap/C++/zombie_bird/our_version/src/level/json.hpp:
@@ -6160,6 +5840,14 @@ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h:
 
 C:/msys64/ucrt64/include/_mingw_mac.h:
 
+C:/msys64/ucrt64/include/c++/15.2.0/deque:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/locale_classes.tcc:
+
+C:/msys64/ucrt64/include/SFML/Window.hpp:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/cxxabi_init_exception.h:
+
 C:/hoctap/C++/zombie_bird/our_version/src/states/LevelSelectState.h:
 
 C:/msys64/ucrt64/include/SFML/Window/WindowStyle.hpp:
@@ -6167,10 +5855,6 @@ C:/msys64/ucrt64/include/SFML/Window/WindowStyle.hpp:
 C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_construct.h:
 
 C:/msys64/ucrt64/include/SFML/Window/WindowBase.hpp:
-
-C:/msys64/ucrt64/include/process.h:
-
-C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp:
 
 C:/hoctap/C++/zombie_bird/our_version/src/core/CollisionSystem.h:
 
@@ -6184,25 +5868,9 @@ C:/msys64/ucrt64/include/c++/15.2.0/bits/ios_base.h:
 
 C:/msys64/ucrt64/include/SFML/Window/Mouse.hpp:
 
-C:/msys64/ucrt64/include/stdlib.h:
-
-C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp:
-
-C:/msys64/ucrt64/include/c++/15.2.0/typeinfo:
-
-C:/msys64/ucrt64/include/c++/15.2.0/locale:
-
 C:/msys64/ucrt64/include/SFML/Window/Event.hpp:
 
 C:/msys64/ucrt64/include/c++/15.2.0/bits/streambuf_iterator.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/cstring:
-
-C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++allocator.h:
-
-C:/msys64/ucrt64/include/SFML/Window/Cursor.hpp:
-
-C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp:
 
 C:/hoctap/C++/zombie_bird/our_version/src/core/PhysicsWorld.cpp:
 
@@ -6210,25 +5878,19 @@ C:/msys64/ucrt64/include/SFML/Graphics/Font.hpp:
 
 C:/msys64/ucrt64/include/SFML/Window/ContextSettings.hpp:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/invoke.h:
+C:/hoctap/C++/zombie_bird/our_version/src/entities/birds/ExplosiveBird.cpp:
 
-C:/msys64/ucrt64/include/c++/15.2.0/tr1/poly_hermite.tcc:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/enable_special_members.h:
 
-C:/msys64/ucrt64/include/SFML/Window.hpp:
-
-C:/msys64/ucrt64/include/c++/15.2.0/deque:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/locale_classes.tcc:
+C:/msys64/ucrt64/include/SFML/Graphics/RenderTexture.hpp:
 
 C:/msys64/ucrt64/include/c++/15.2.0/ext/numeric_traits.h:
+
+C:/msys64/ucrt64/include/SFML/System/Vector3.hpp:
 
 C:/msys64/ucrt64/include/c++/15.2.0/bits/basic_string.h:
 
 C:/msys64/ucrt64/include/SFML/Window/WindowHandle.hpp:
-
-C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h:
-
-C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp:
 
 C:/msys64/ucrt64/include/SFML/System/Vector2.hpp:
 
@@ -6242,107 +5904,23 @@ C:/msys64/ucrt64/include/c++/15.2.0/bits/uses_allocator.h:
 
 C:/msys64/ucrt64/include/SFML/System/Utf.inl:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/concept_check.h:
+C:/msys64/ucrt64/include/SFML/Window/VideoMode.hpp:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/parse_numbers.h:
+C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++locale.h:
 
-C:/msys64/ucrt64/include/SFML/Window/Context.hpp:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h:
 
-C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h:
+C:/msys64/ucrt64/include/SFML/Window/Export.hpp:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/allocator.h:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/shared_ptr_base.h:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/stringfwd.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/cstddef:
-
-C:/msys64/ucrt64/include/SFML/System/ThreadLocal.hpp:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/locale_facets_nonio.tcc:
-
-C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/basic_file.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/requires_hosted.h:
-
-C:/msys64/ucrt64/include/wchar.h:
-
-C:/msys64/ucrt64/include/SFML/Graphics/Rect.inl:
-
-C:/msys64/ucrt64/include/SFML/System/String.hpp:
-
-C:/hoctap/C++/zombie_bird/our_version/src/entities/birds/Bird.h:
-
-C:/msys64/ucrt64/include/SFML/System/MemoryInputStream.hpp:
-
-C:/msys64/ucrt64/include/c++/15.2.0/filesystem:
-
-C:/msys64/ucrt64/include/c++/15.2.0/backward/auto_ptr.h:
-
-C:/msys64/ucrt64/include/SFML/Window/Vulkan.hpp:
-
-C:/msys64/ucrt64/include/SFML/System/Vector3.inl:
-
-C:/msys64/ucrt64/include/SFML/System/Lock.hpp:
-
-C:/msys64/ucrt64/include/SFML/Graphics/VertexArray.hpp:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/basic_ios.tcc:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/std_function.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/string:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bit:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/codecvt.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/cwchar:
-
-C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp:
-
-C:/msys64/ucrt64/include/SFML/System/Mutex.hpp:
-
-C:/msys64/ucrt64/include/c++/15.2.0/array:
-
-C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp:
-
-C:/msys64/ucrt64/include/swprintf.inl:
-
-C:/msys64/ucrt64/include/SFML/System/Err.hpp:
-
-C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp:
-
-C:/msys64/ucrt64/include/c++/15.2.0/iomanip:
-
-C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl:
-
-C:/msys64/ucrt64/include/SFML/Graphics/Glsl.inl:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h:
-
-C:/msys64/ucrt64/include/SFML/Window/GlResource.hpp:
-
-C:/msys64/ucrt64/include/SFML/Graphics/ConvexShape.hpp:
-
-C:/msys64/ucrt64/include/c++/15.2.0/cerrno:
-
-C:/msys64/ucrt64/include/c++/15.2.0/limits:
-
-C:/msys64/ucrt64/include/SFML/Graphics/Shader.hpp:
-
-C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/basic_string.tcc:
-
-C:/msys64/ucrt64/include/c++/15.2.0/backward/binders.h:
-
-C:/msys64/ucrt64/include/SFML/System.hpp:
-
-C:/msys64/ucrt64/include/SFML/System/String.inl:
+C:/msys64/ucrt64/include/c++/15.2.0/ext/alloc_traits.h:
 
 C:/msys64/ucrt64/include/c++/15.2.0/bits/valarray_array.h:
 
 C:/msys64/ucrt64/include/SFML/Graphics/CircleShape.hpp:
+
+C:/msys64/ucrt64/include/SFML/System/String.inl:
 
 C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algobase.h:
 
@@ -6358,6 +5936,42 @@ C:/msys64/ucrt64/include/c++/15.2.0/debug/assertions.h:
 
 C:/msys64/ucrt64/include/c++/15.2.0/system_error:
 
+C:/hoctap/C++/zombie_bird/our_version/src/level/LevelLoader.cpp:
+
+C:/msys64/ucrt64/include/SFML/Graphics/Rect.hpp:
+
+C:/msys64/ucrt64/include/SFML/Graphics/Glyph.hpp:
+
+C:/msys64/ucrt64/include/SFML/Graphics/Glsl.inl:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator_base_funcs.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/locale_classes.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/exception:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/std_function.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/string:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/forward_list.tcc:
+
+C:/hoctap/C++/zombie_bird/our_version/src/entities/birds/SplitBird.cpp:
+
+C:/msys64/ucrt64/include/SFML/Graphics/Glsl.hpp:
+
+C:/msys64/ucrt64/include/errno.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/hashtable.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/node_handle.h:
+
+C:/msys64/ucrt64/include/SFML/Graphics/RectangleShape.hpp:
+
+C:/msys64/ucrt64/include/SFML/System/Vector2.inl:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator.h:
+
 C:/msys64/ucrt64/include/c++/15.2.0/sstream:
 
 C:/msys64/ucrt64/include/sys/types.h:
@@ -6372,39 +5986,59 @@ C:/msys64/ucrt64/include/stdint.h:
 
 C:/msys64/ucrt64/include/c++/15.2.0/istream:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/shared_ptr_base.h:
+C:/msys64/ucrt64/include/SFML/Graphics/RenderWindow.hpp:
 
-C:/msys64/ucrt64/include/c++/15.2.0/ext/alloc_traits.h:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/atomic_base.h:
 
-C:/msys64/ucrt64/include/SFML/Window/VideoMode.hpp:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/basic_ios.tcc:
 
-C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp:
+C:/msys64/ucrt64/include/c++/15.2.0/tr1/modified_bessel_func.tcc:
 
-C:/msys64/ucrt64/include/SFML/System/Export.hpp:
+C:/msys64/ucrt64/include/SFML/Window/Sensor.hpp:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/nested_exception.h:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/istream.tcc:
 
-C:/msys64/ucrt64/include/SFML/System/Time.hpp:
+C:/msys64/ucrt64/include/SFML/System/ThreadLocal.hpp:
 
-C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/locale_facets_nonio.tcc:
 
-C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/os_defines.h:
+C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/basic_file.h:
 
-C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/requires_hosted.h:
 
-C:/msys64/ucrt64/include/SFML/Config.hpp:
+C:/msys64/ucrt64/include/_mingw_off_t.h:
 
-C:/msys64/ucrt64/include/SFML/Graphics/View.hpp:
+C:/msys64/ucrt64/include/c++/15.2.0/tr1/bessel_function.tcc:
 
-C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp:
+C:/msys64/ucrt64/include/SFML/Window/GlResource.hpp:
 
-C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp:
+C:/msys64/ucrt64/include/SFML/Graphics/ConvexShape.hpp:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/erase_if.h:
+C:/msys64/ucrt64/include/c++/15.2.0/cerrno:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/uses_allocator_args.h:
+C:/msys64/ucrt64/include/c++/15.2.0/limits:
 
-C:/msys64/ucrt64/include/SFML/System/Vector3.hpp:
+C:/msys64/ucrt64/include/c++/15.2.0/bit:
+
+C:/msys64/ucrt64/include/c++/15.2.0/pstl/pstl_config.h:
+
+C:/msys64/ucrt64/include/SFML/Graphics/Shader.hpp:
+
+C:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/concept_check.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/parse_numbers.h:
+
+C:/msys64/ucrt64/include/SFML/Window/Context.hpp:
+
+C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/allocator.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/stringfwd.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/cstddef:
 
 C:/hoctap/C++/zombie_bird/our_version/src/core/PhysicsBody.h:
 
@@ -6414,121 +6048,49 @@ C:/msys64/ucrt64/include/SFML/Graphics/Drawable.hpp:
 
 C:/msys64/ucrt64/include/SFML/Graphics/RenderStates.hpp:
 
-C:/msys64/ucrt64/include/c++/15.2.0/tr1/modified_bessel_func.tcc:
-
-C:/msys64/ucrt64/include/SFML/Audio.hpp:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/atomic_base.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/tr1/ell_integral.tcc:
-
-C:/hoctap/C++/zombie_bird/our_version/src/entities/Pig.h:
-
-C:/msys64/ucrt64/include/SFML/System/Sleep.hpp:
-
-C:/msys64/ucrt64/include/_mingw.h:
+C:/msys64/ucrt64/include/SFML/Graphics/View.hpp:
 
 C:/msys64/ucrt64/include/SFML/Graphics/Transformable.hpp:
 
-C:/msys64/ucrt64/include/SFML/Graphics/Color.hpp:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/codecvt.h:
 
-C:/msys64/ucrt64/include/SFML/Audio/Export.hpp:
+C:/msys64/ucrt64/include/c++/15.2.0/cwchar:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/forward_list.tcc:
+C:/hoctap/C++/zombie_bird/our_version/src/entities/birds/Bird.h:
 
-C:/hoctap/C++/zombie_bird/our_version/src/entities/birds/SplitBird.cpp:
+C:/msys64/ucrt64/include/_mingw.h:
 
-C:/msys64/ucrt64/include/SFML/Graphics/Glsl.hpp:
+C:/msys64/ucrt64/include/SFML/System/Sleep.hpp:
 
-C:/msys64/ucrt64/include/SFML/Graphics/Glyph.hpp:
+C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/basic_ios.h:
-
-C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp:
-
-C:/msys64/ucrt64/include/c++/15.2.0/type_traits:
-
-C:/msys64/ucrt64/include/SFML/Graphics/PrimitiveType.hpp:
-
-C:/msys64/ucrt64/include/SFML/Graphics/RectangleShape.hpp:
-
-C:/msys64/ucrt64/include/SFML/System/Vector2.inl:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_iterator.h:
-
-C:/msys64/ucrt64/include/SFML/Audio/Music.hpp:
-
-C:/msys64/ucrt64/include/_mingw_off_t.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/set:
-
-C:/msys64/ucrt64/include/c++/15.2.0/tr1/bessel_function.tcc:
-
-C:/hoctap/C++/zombie_bird/our_version/src/level/LevelLoader.cpp:
-
-C:/msys64/ucrt64/include/SFML/Graphics/Rect.hpp:
-
-C:/msys64/ucrt64/include/corecrt_wctype.h:
-
-C:/msys64/ucrt64/include/SFML/System/Thread.inl:
-
-C:/msys64/ucrt64/include/c++/15.2.0/iosfwd:
-
-C:/msys64/ucrt64/include/c++/15.2.0/cassert:
-
-C:/msys64/ucrt64/include/c++/15.2.0/algorithm:
-
-C:/msys64/ucrt64/include/SFML/System/Thread.hpp:
-
-C:/msys64/ucrt64/include/SFML/Graphics/VertexBuffer.hpp:
-
-C:/msys64/ucrt64/include/c++/15.2.0/tr1/exp_integral.tcc:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_relops.h:
-
-C:/msys64/ucrt64/include/SFML/Graphics/RenderTarget.hpp:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h:
-
-C:/msys64/ucrt64/include/SFML/Graphics/RenderWindow.hpp:
+C:/msys64/ucrt64/include/c++/15.2.0/map:
 
 C:/msys64/ucrt64/include/SFML/Graphics/Shape.hpp:
-
-C:/msys64/ucrt64/include/sec_api/wchar_s.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/std_abs.h:
-
-C:/msys64/ucrt64/include/SFML/Graphics.hpp:
 
 C:/msys64/ucrt64/include/SFML/Window/Keyboard.hpp:
 
 C:/msys64/ucrt64/include/SFML/Graphics/Text.hpp:
 
+C:/msys64/ucrt64/include/SFML/Graphics.hpp:
+
 C:/msys64/ucrt64/include/SFML/Window/Window.hpp:
 
 C:/msys64/ucrt64/include/SFML/Graphics/Transform.hpp:
 
-C:/msys64/ucrt64/include/SFML/System/Clock.hpp:
+C:/msys64/ucrt64/include/SFML/Graphics/VertexArray.hpp:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/cxxabi_init_exception.h:
+C:/msys64/ucrt64/include/SFML/System/Vector3.inl:
 
-C:/hoctap/C++/zombie_bird/our_version/src/entities/birds/ExplosiveBird.cpp:
+C:/msys64/ucrt64/include/SFML/System/Lock.hpp:
 
-C:/msys64/ucrt64/include/SFML/Graphics/RenderTexture.hpp:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_relops.h:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/enable_special_members.h:
+C:/msys64/ucrt64/include/SFML/Graphics/RenderTarget.hpp:
 
-C:/msys64/ucrt64/include/SFML/Window/Export.hpp:
+C:/msys64/ucrt64/include/SFML/Graphics/VertexBuffer.hpp:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/exception_ptr.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/locale_conv.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/functexcept.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/functional_hash.h:
+C:/msys64/ucrt64/include/c++/15.2.0/tr1/exp_integral.tcc:
 
 C:/msys64/ucrt64/include/_timeval.h:
 
@@ -6536,21 +6098,63 @@ C:/msys64/ucrt64/include/c++/15.2.0/bits/hash_bytes.h:
 
 C:/msys64/ucrt64/include/c++/15.2.0/bits/ostream.tcc:
 
-C:/msys64/ucrt64/include/errno.h:
+C:/msys64/ucrt64/include/SFML/System/MemoryInputStream.hpp:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/node_handle.h:
+C:/msys64/ucrt64/include/c++/15.2.0/bits/basic_string.tcc:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/hashtable.h:
+C:/msys64/ucrt64/include/c++/15.2.0/backward/binders.h:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/hashtable_policy.h:
+C:/msys64/ucrt64/include/SFML/System.hpp:
 
-C:/msys64/ucrt64/include/SFML/Window/Sensor.hpp:
+C:/msys64/ucrt64/include/SFML/System/Clock.hpp:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/istream.tcc:
+C:/msys64/ucrt64/include/swprintf.inl:
 
-C:/msys64/ucrt64/include/c++/15.2.0/exception:
+C:/msys64/ucrt64/include/SFML/System/Err.hpp:
 
-C:/msys64/ucrt64/include/c++/15.2.0/bits/locale_classes.h:
+C:/hoctap/C++/zombie_bird/our_version/src/entities/Pig.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/tr1/ell_integral.tcc:
+
+C:/msys64/ucrt64/include/wchar.h:
+
+C:/msys64/ucrt64/include/SFML/Graphics/Rect.inl:
+
+C:/msys64/ucrt64/include/SFML/System/String.hpp:
+
+C:/msys64/ucrt64/include/c++/15.2.0/filesystem:
+
+C:/msys64/ucrt64/include/c++/15.2.0/backward/auto_ptr.h:
+
+C:/msys64/ucrt64/include/SFML/Window/Vulkan.hpp:
+
+C:/msys64/ucrt64/include/SFML/System/Export.hpp:
+
+C:/msys64/ucrt64/include/c++/15.2.0/cassert:
+
+C:/msys64/ucrt64/include/c++/15.2.0/algorithm:
+
+C:/msys64/ucrt64/include/SFML/System/Thread.hpp:
+
+C:/msys64/ucrt64/include/corecrt_wctype.h:
+
+C:/msys64/ucrt64/include/SFML/System/Thread.inl:
+
+C:/msys64/ucrt64/include/c++/15.2.0/iosfwd:
+
+C:/msys64/ucrt64/include/SFML/System/Mutex.hpp:
+
+C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/nested_exception.h:
+
+C:/msys64/ucrt64/include/SFML/System/Time.hpp:
+
+C:/msys64/ucrt64/include/c++/15.2.0/vector:
+
+C:/msys64/ucrt64/include/sec_api/wchar_s.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/std_abs.h:
 
 C:/msys64/ucrt64/include/assert.h:
 
@@ -6628,21 +6232,15 @@ C:/msys64/ucrt64/include/c++/15.2.0/bits/unique_ptr.h:
 
 C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algo.h:
 
+C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/error_constants.h:
+
 C:/msys64/ucrt64/include/SFML/Graphics/Texture.hpp:
 
 C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multimap.h:
 
-C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h:
-
-C:/msys64/ucrt64/include/c++/15.2.0/map:
-
-C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h:
-
 C:/hoctap/C++/zombie_bird/our_version/src/states/GameplayState.h:
 
 C:/msys64/ucrt64/include/SFML/System/NonCopyable.hpp:
-
-C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp:
 
 C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_pair.h:
 
@@ -6650,11 +6248,15 @@ C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_raw_storage_iter.h:
 
 C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tempbuf.h:
 
+C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/cpu_defines.h:
+
 C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_vector.h:
 
-C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp:
-
 C:/msys64/ucrt64/include/c++/15.2.0/bits/uniform_int_dist.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/locale:
+
+C:/msys64/ucrt64/include/c++/15.2.0/typeinfo:
 
 C:/msys64/ucrt64/include/c++/15.2.0/bits/mask_array.h:
 
@@ -6670,15 +6272,17 @@ C:/msys64/ucrt64/include/c++/15.2.0/bits/streambuf.tcc:
 
 C:/msys64/ucrt64/include/c++/15.2.0/string_view:
 
-C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp:
-
 C:/msys64/ucrt64/include/c++/15.2.0/bits/string_view.tcc:
-
-C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h:
 
 C:/msys64/ucrt64/include/SFML/System/ThreadLocalPtr.hpp:
 
+C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h:
+
 C:/msys64/ucrt64/include/c++/15.2.0/ext/string_conversions.h:
+
+C:/msys64/ucrt64/include/SFML/Graphics/PrimitiveType.hpp:
+
+C:/msys64/ucrt64/include/c++/15.2.0/type_traits:
 
 C:/msys64/ucrt64/include/corecrt_wstdlib.h:
 
@@ -6738,6 +6342,8 @@ C:/msys64/ucrt64/include/c++/15.2.0/ostream:
 
 C:/msys64/ucrt64/include/c++/15.2.0/pstl/execution_defs.h:
 
+C:/msys64/ucrt64/include/corecrt_startup.h:
+
 C:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_memory_defs.h:
 
 C:/msys64/ucrt64/include/c++/15.2.0/stdlib.h:
@@ -6761,3 +6367,37 @@ C:/msys64/ucrt64/include/c++/15.2.0/tr1/hypergeometric.tcc:
 C:/msys64/ucrt64/include/c++/15.2.0/bits/allocated_ptr.h:
 
 C:/msys64/ucrt64/include/c++/15.2.0/tr1/special_function_util.h:
+
+C:/hoctap/C++/zombie_bird/our_version/src/states/WinState.cpp:
+
+C:/msys64/ucrt64/include/c++/15.2.0/tuple:
+
+C:/msys64/ucrt64/include/c++/15.2.0/bits/gslice_array.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/unordered_map:
+
+C:/msys64/ucrt64/include/c++/15.2.0/cstring:
+
+C:/msys64/ucrt64/include/SFML/Window/Cursor.hpp:
+
+C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++allocator.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_base.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/os_defines.h:
+
+C:/msys64/ucrt64/include/SFML/Config.hpp:
+
+C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h:
+
+C:/hoctap/C++/zombie_bird/our_version/src/ui/Slingshot.cpp:
+
+C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/messages_members.h:
+
+C:/msys64/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32/bits/time_members.h:
+
+C:/msys64/ucrt64/include/corecrt.h:

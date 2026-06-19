@@ -295,6 +295,7 @@ CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.obj: \
  C:/hoctap/C++/zombie_bird/our_version/src/core/ResourceManager.h \
  C:\hoctap\C++\zombie_bird\our_version\src\states\LoseState.h \
  C:/hoctap/C++/zombie_bird/our_version/src/core/CollisionSystem.h \
+ C:\hoctap\C++\zombie_bird\our_version\src\states\MainMenuState.h \
  C:/msys64/ucrt64/include/c++/15.2.0/cmath \
  C:/msys64/ucrt64/include/math.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/specfun.h \
