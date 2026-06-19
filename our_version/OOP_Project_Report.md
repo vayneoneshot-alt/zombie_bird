@@ -66,9 +66,8 @@ This outlines how the project was systematically built from scratch.
 - **Step 4.2**: Integrate a JSON parser (nlohmann/json) to dynamically load level layouts (blocks, pigs, bird inventory) from `.json` files.
 - **Step 4.3**: Implement win/loss conditions inside `GameplayState` (checking if all pigs are dead or if birds are depleted).
 
-### Phase 5: UI, Audio, and Polish
+### Phase 5: UI and Polish
 - **Step 5.1**: Build `MainMenuState`, `LevelSelectState`, `WinState`, and `LoseState` with interactive UI elements.
-- **Step 5.2**: Integrate background music and spatial sound effects (bird launches, pig grunts, wood breaking).
 - **Step 5.3**: Final tuning of physics parameters (gravity scale, block mass) and pre-settling logic to prevent initial jittering.
 
 ---
@@ -83,4 +82,4 @@ To successfully execute the implementation plan, the workload was divided to emp
 | **Quang Minh** | **Physics & Collision Specialist** | Phase 2 | **Encapsulation**: Built the `CollisionSystem`. Encapsulated complex SAT math and manifold generation away from entities. Managed `PhysicsBody` state protections, ensuring strict boundaries on velocity and impulse modification. |
 | **Tuấn Nguyên** | **Gameplay Programmer (Entities)** | Phase 3 & 4 | **Inheritance & Polymorphism**: Architected the `Entity` base class hierarchy. Developed the polymorphic subclasses for `DashBird`, `ExplosiveBird`, and `SplitBird`, dynamically overriding abilities and interactions. |
 | **An Nam** | **Level Design & Systems Integrator** | Phase 4 | **Abstraction & Inheritance**: Implemented the JSON `LevelLoader`. Extended the `Entity` framework to handle dynamic instantiation and safely abstracted level parsing logic entirely away from the `GameplayState`. |
-| **Trung Nguyên**| **UI/UX & State Programmer** | Phase 1 & 5 | **Polymorphism**: Implemented the various concrete game states (`MainMenuState`, `WinState`, etc.) that inherit from `IState`. Encapsulated UI components into scalable rendering classes and managed audio subsystems. |
+| **Trung Nguyên**| **UI/UX & State Programmer** | Phase 1 & 5 | **Polymorphism**: Implemented the various concrete game states (`MainMenuState`, `WinState`, etc.) that inherit from `IState`. Encapsulated UI components into scalable rendering classes. |
