@@ -420,7 +420,6 @@ HappyBird.exe: CMakeFiles/HappyBird.dir/src/ui/TrajectoryLine.cpp.obj
 HappyBird.exe: CMakeFiles/HappyBird.dir/build.make
 HappyBird.exe: C:/msys64/ucrt64/lib/libsfml-graphics.dll.a
 HappyBird.exe: C:/msys64/ucrt64/lib/libsfml-window.dll.a
-HappyBird.exe: C:/msys64/ucrt64/lib/libsfml-audio.dll.a
 HappyBird.exe: C:/msys64/ucrt64/lib/libsfml-system.dll.a
 HappyBird.exe: CMakeFiles/HappyBird.dir/linkLibs.rsp
 HappyBird.exe: CMakeFiles/HappyBird.dir/objects1.rsp

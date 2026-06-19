@@ -245,26 +245,6 @@ CMakeFiles/HappyBird.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/SFML/Graphics/Text.hpp \
  C:/msys64/ucrt64/include/SFML/Graphics/VertexBuffer.hpp \
  C:\hoctap\C++\zombie_bird\our_version\src\core/ResourceManager.h \
- C:/msys64/ucrt64/include/SFML/Audio.hpp \
- C:/msys64/ucrt64/include/SFML/Audio/InputSoundFile.hpp \
- C:/msys64/ucrt64/include/SFML/Audio/Export.hpp \
- C:/msys64/ucrt64/include/SFML/Audio/Listener.hpp \
- C:/msys64/ucrt64/include/SFML/Audio/Music.hpp \
- C:/msys64/ucrt64/include/SFML/Audio/SoundStream.hpp \
- C:/msys64/ucrt64/include/SFML/Audio/SoundSource.hpp \
- C:/msys64/ucrt64/include/SFML/Audio/AlResource.hpp \
- C:/msys64/ucrt64/include/SFML/Audio/OutputSoundFile.hpp \
- C:/msys64/ucrt64/include/SFML/Audio/Sound.hpp \
- C:/msys64/ucrt64/include/SFML/Audio/SoundBuffer.hpp \
- C:/msys64/ucrt64/include/c++/15.2.0/set \
- C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
- C:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
- C:/msys64/ucrt64/include/SFML/Audio/SoundBufferRecorder.hpp \
- C:/msys64/ucrt64/include/SFML/Audio/SoundRecorder.hpp \
- C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.hpp \
- C:/msys64/ucrt64/include/SFML/Audio/SoundFileFactory.inl \
- C:/msys64/ucrt64/include/SFML/Audio/SoundFileReader.hpp \
- C:/msys64/ucrt64/include/SFML/Audio/SoundFileWriter.hpp \
  C:/msys64/ucrt64/include/c++/15.2.0/unordered_map \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/unordered_map.h \
  C:/msys64/ucrt64/include/c++/15.2.0/bits/hashtable.h \
