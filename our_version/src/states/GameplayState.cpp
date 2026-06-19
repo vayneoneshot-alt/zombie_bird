@@ -129,6 +129,7 @@ void GameplayState::handleEvent(const sf::Event& e) {
             birdQueue.pop_front();
             
             bird->launch(launchVel);
+            physicsActiveTimer = 5.0f;
             bird->getBody().userData = bird.get();
             physicsWorld.addBody(&bird->getBody());
             activeBirds.push_back(std::move(bird));
@@ -189,7 +190,11 @@ void GameplayState::update(float dt) {
         block->update(dt);
     }
 
-    auto events = physicsWorld.step(dt, 10);
+    std::vector<CollisionEvent> events;
+    if (physicsActiveTimer > 0.0f) {
+        physicsActiveTimer -= dt;
+        events = physicsWorld.step(dt, 10);
+    }
     
     // Process Collision events for damage
     for (const auto& ev : events) {

@@ -50,6 +50,8 @@ private:
     sf::Text scoreText;
     int score = 0;
     
+    float physicsActiveTimer = 0.0f;
+    
     void checkCollisions();
     void resolveExplosions(const ExplosiveBird* source);
     bool checkWinLoss();
