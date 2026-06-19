@@ -11,6 +11,7 @@ Several concrete classes were created to manage distinct phases of the applicati
 - **`MainMenuState`**: Handles the title screen and entry point.
 - **`LevelSelectState`**: Manages dynamic button generation to load specific JSON levels.
 - **`WinState` / `LoseState`**: Handles end-game logic and transition routing.
+- **Gameplay Flow Elements**: Implemented an in-game Exit button and a 3-second cinematic delay upon winning before transitioning states.
 
 ```cpp
 class LevelSelectState : public IState {
@@ -32,7 +33,7 @@ Instead of bloating the states with raw SFML rendering commands, complex UI logi
 
 - **`Slingshot` Class**: Encapsulates the dragging mechanics, bounds checking (max pull distance), and the rendering of the visual rubber bands. The math to calculate launch vectors is hidden behind `getLaunchVelocity()`.
 - **`TrajectoryLine` Class**: Encapsulates a mathematical projectile prediction loop. It computes the parabolic arc based on current velocity and gravity, constructing an `sf::VertexArray` internally.
-- **UI Button Structs**: Encapsulates the bounding box (`sf::RectangleShape`) and text (`sf::Text`), allowing for clean bounds-checking during mouse events.
+- **UI Button Structs**: Encapsulates the bounding box (`sf::RectangleShape`) and text (`sf::Text`), allowing for clean bounds-checking during mouse events (e.g., Level Selection and the in-game Exit button).
 
 **OOP Principle Application (Encapsulation):** By wrapping UI elements into self-contained classes, the `GameplayState` only needs to call `slingshot->draw(window)` and `trajectoryLine.calculate(...)`. The internal mathematics and visual state changes (like hovering or clicking) are completely hidden from the consumer.
 

@@ -24,8 +24,7 @@ protected:
     sf::Sprite sprite;
 };
 ```
-**OOP Principle Application (Inheritance):** All interactive objects (`Bird`, `Pig`, `Block`) inherit from `Entity`. They inherit the base physics body and sprite, ensuring that the main loop can blindly iterate over collections of `Entity*` and call `update()` or `draw()` without knowing the concrete type.
-
+**OOP Principle Application (Inheritance):** All interactive objects (`Bird`, `Pig`, `Block`) inherit from `Entity`. They inherit the base physics body and sprite, ensuring that the main loop can blindly iterate over their respective collections and call `update()` or `draw()` leveraging the base class contract.
 ## 2. Polymorphism: The `Bird` Subclasses
 
 The true power of the object-oriented design is showcased in the polymorphic design of the bird abilities.

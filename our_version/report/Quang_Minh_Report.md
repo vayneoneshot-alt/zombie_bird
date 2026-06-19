@@ -22,12 +22,12 @@ float overlapX = obbOverlap(a, aHalfSize, b, bHalfSize, a->rotation, b->rotation
 
 ## 2. Managing `PhysicsBody` State Protections
 
-The `PhysicsBody` struct was designed to encapsulate the physical properties of an entity (mass, velocity, forces, shape) away from its graphical representation.
+The `PhysicsBody` struct was designed to encapsulate the physical properties of an entity (mass, inertia, forces) away from its graphical representation.
 
 ### Strict Boundaries on Modification
-While `PhysicsBody` acts as a data container, it employs encapsulation principles to ensure that its physical state is manipulated securely through defined interfaces:
-- **Forces and Impulses**: Rather than directly altering the velocity vector from external classes, forces are applied via methods like `applyForce()` or resolved by the `PhysicsWorld`'s iterative solver.
-- **Velocity Clamping**: The collision resolution ensures strict boundaries on velocity and impulse modification (e.g., using Baumgarte stabilization and clamping friction impulses to prevent unstable infinite energy gain).
+While `PhysicsBody` acts as a data container for the `PhysicsWorld` solver (which modifies velocities directly), it employs encapsulation principles to ensure that its physical properties are calculated safely:
+- **Mass and Inertia Management**: Inverse mass and inverse inertia are automatically and safely recalculated when using controlled methods like `setMass()` and `setStatic()`.
+- **Force Application**: External classes apply forces via methods like `applyForce()` rather than manually manipulating the internal acceleration vectors, ensuring physics calculations remain predictable.
 
 ### Decoupling Logic
 Because `PhysicsBody` only holds a `void* userData` pointer back to its owner, the physics solver has zero dependencies on the actual game logic. 
