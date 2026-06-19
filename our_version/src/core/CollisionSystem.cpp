@@ -206,13 +206,6 @@ CollisionManifold CollisionSystem::obbVsOBB(const PhysicsBody* a, sf::Vector2f h
 }
 
 CollisionManifold CollisionSystem::detectCollision(PhysicsBody* a, PhysicsBody* b) {
-    if (!a->userData || !b->userData) {
-        // Assume OBBvsOBB for ground vs blocks if ground doesn't have userdata?
-        // Let's assume all dynamic bodies have userData = Entity*
-        // Ground might have userData = nullptr. Let's make ground an OBB.
-        // Actually, if userData is missing, we must default to OBB.
-        return obbVsOBB(a, {10000.0f, 100.0f}, b, {17.5f, 35.0f}); // this is hacky, but wait:
-    }
     
     Entity* entA = static_cast<Entity*>(a->userData);
     Entity* entB = static_cast<Entity*>(b->userData);
