@@ -13,13 +13,13 @@ The "Zombie Bird" codebase demonstrates a well-structured, modular C++ architect
 ### Core Architecture and Design Patterns
 - **State Pattern**: The game effectively uses a `StateManager` interacting with an abstract `IState` interface. This allows seamless transitions between `MainMenuState`, `LevelSelectState`, `GameplayState`, `WinState`, and `LoseState` without tightly coupling the states together.
 - **Entity Hierarchy (Component-like Modeling)**: The game uses a robust inheritance hierarchy for game objects (`Bird`, `Pig`, `Block`), binding visual representation (SFML Sprites) to a custom physical representation (`PhysicsBody`).
-- **Custom Physics Engine**: Rather than relying on external libraries like Box2D, the game implements a custom `PhysicsWorld` and `CollisionSystem` supporting Circle, AABB, and OBB (Oriented Bounding Box) collision detection and resolution.
+- **Custom Physics Engine**: Rather than relying on external libraries like Box2D, the game implements a custom `PhysicsWorld` and `CollisionSystem` supporting Circle and OBB (Oriented Bounding Box) collision detection and resolution.
 
 ### The 4 Pillars of OOP Implemented
 
 #### I. Encapsulation
 The codebase actively restricts direct access to an object's internal state, exposing only what is necessary through public methods.
-- **`PhysicsBody`**: Manages its own velocity, mass, restitution, and transform (position/rotation). External classes cannot arbitrarily modify forces without going through specific methods like `applyForce()` or `applyImpulse()`, ensuring physics calculations remain stable and predictable.
+- **`PhysicsBody`**: Manages mass, inertia, and forces through controlled methods like `setMass()`, `setStatic()`, and `applyForce()`. While acting as a data container for the `PhysicsWorld` solver, it ensures physical properties like inverse mass and inertia are calculated safely and consistently.
 - **Game Entities**: Classes like `Pig` and `Block` encapsulate their `health` and `isDestroyed` status. Damage is applied via specific interaction methods (e.g., assessing collision impulse), protecting the internal state from invalid modifications.
 
 #### II. Inheritance
@@ -30,8 +30,8 @@ Inheritance is utilized to share common functionality and define strict "is-a" r
 #### III. Polymorphism
 Polymorphism allows the game engine to treat different objects uniformly through base class pointers.
 - **Runtime State Resolution**: The `StateManager` holds a stack of `std::unique_ptr<IState>`. When `update(dt)` or `draw(window)` is called, C++ dynamically dispatches the call to the currently active state (e.g., `GameplayState` or `MainMenuState`).
-- **Dynamic Entities**: In `GameplayState`, all objects are stored dynamically. The game loop iterates through them, calling `virtual void update(float dt)` and `virtual void draw(sf::RenderWindow& window)` without needing to know their specific types.
-- **Bird Abilities**: The `virtual void activateAbility()` method is overridden in subclasses. When the player clicks, the game calls this method on the active `Bird*`, and the correct behavior (Dashing, Exploding, or Splitting) executes dynamically.
+- **Dynamic Entities**: In `GameplayState`, birds are stored dynamically as `std::unique_ptr<Bird>`. The game loop iterates through them, calling `virtual void update(float dt)` and `virtual void draw(sf::RenderWindow& window)` without needing to know if they are `DashBird`, `SplitBird`, or `BasicBird`.
+- **Bird Abilities**: The `virtual void onAbility()` method is overridden in subclasses. When the player clicks, the game calls this method on the active `Bird*`, and the correct behavior (Dashing, Exploding, or Splitting) executes dynamically.
 
 #### IV. Abstraction
 Abstraction hides complex implementation details behind simple, high-level interfaces.
@@ -47,27 +47,28 @@ This outlines how the project was systematically built from scratch.
 ### Phase 1: Core Engine & Architecture Foundation
 - **Step 1.1**: Set up CMake, SFML window initialization, and the main application loop (`main.cpp`).
 - **Step 1.2**: Define the `IState` interface and implement the `StateManager` to handle pushing, popping, and transitioning between states.
-- **Step 1.3**: Implement the `ResourceManager` to abstract the loading and caching of textures, fonts, and sounds.
+- **Step 1.3**: Implement the `ResourceManager` to abstract the loading and caching of textures and fonts.
 
 ### Phase 2: Custom Physics Engine
 - **Step 2.1**: Define the `PhysicsBody` struct to hold mass, velocity, forces, and shape data.
-- **Step 2.2**: Implement `PhysicsWorld` to integrate physics bodies over time using Semi-Implicit Euler integration, applying gravity and damping.
-- **Step 2.3**: Build the `CollisionSystem`. Implement Circle-vs-Circle and Circle-vs-AABB detection.
+- **Step 2.2**: Implement `PhysicsWorld` to integrate physics bodies over time using Semi-Implicit Euler integration, applying gravity.
+- **Step 2.3**: Build the `CollisionSystem`. Implement Circle-vs-Circle and Circle-vs-OBB detection.
 - **Step 2.4**: Implement advanced Oriented Bounding Box (OBB) collision detection using SAT (Separating Axis Theorem) and impulse-based collision resolution (bounciness and friction).
 
 ### Phase 3: OOP Entity Modeling & Game Objects
 - **Step 3.1**: Create the abstract `Entity` base class linking a `PhysicsBody` to an `sf::Sprite`.
 - **Step 3.2**: Implement the `Block` and `Pig` classes, adding health, damage calculation based on collision impulse, and destruction logic.
 - **Step 3.3**: Build the base `Bird` class with dragging and launching mechanics.
-- **Step 3.4**: Leverage inheritance to implement polymorphic birds (`BasicBird`, `DashBird`, `ExplosiveBird`, `SplitBird`) with overridden `activateAbility()` methods.
+- **Step 3.4**: Leverage inheritance to implement polymorphic birds (`BasicBird`, `DashBird`, `ExplosiveBird`, `SplitBird`) with overridden `onAbility()` methods.
 
 ### Phase 4: Gameplay Mechanics & Level Loading
-- **Step 4.1**: Implement the `Slingshot` logic (mouse dragging, trajectory calculation, rubber band rendering).
+- **Step 4.1**: Implement the `Slingshot` logic (mouse dragging, rubber band rendering) and `TrajectoryLine` (parabolic flight path prediction).
 - **Step 4.2**: Integrate a JSON parser (nlohmann/json) to dynamically load level layouts (blocks, pigs, bird inventory) from `.json` files.
 - **Step 4.3**: Implement win/loss conditions inside `GameplayState` (checking if all pigs are dead or if birds are depleted).
 
 ### Phase 5: UI and Polish
-- **Step 5.1**: Build `MainMenuState`, `LevelSelectState`, `WinState`, and `LoseState` with interactive UI elements.
+- **Step 5.1**: Build `MainMenuState`, `LevelSelectState`, `WinState`, and `LoseState` to handle application flow. Implement interactive UI elements like the Level Selection buttons and an in-game Exit button.
+- **Step 5.2**: Implement a 3-second cinematic delay upon winning before transitioning to the WinState.
 - **Step 5.3**: Final tuning of physics parameters (gravity scale, block mass) and pre-settling logic to prevent initial jittering.
 
 ---
