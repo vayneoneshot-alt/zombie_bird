@@ -235,7 +235,11 @@ void GameplayState::update(float dt) {
             }
             else if ((isPigA && isBlockB) || (isPigB && isBlockA)) {
                 Pig* pig = isPigA ? static_cast<Pig*>(entA) : static_cast<Pig*>(entB);
-                if (!pig->isDead() && impact > 150.0f) {
+                Block* block = isBlockA ? static_cast<Block*>(entA) : static_cast<Block*>(entB);
+                // Only damage pig if the block is actually moving fast (not just jittering)
+                auto& bv = block->getBody().velocity;
+                float blockSpeed = std::sqrt(bv.x * bv.x + bv.y * bv.y);
+                if (!pig->isDead() && impact > 150.0f && blockSpeed > 50.0f) {
                     pig->receiveDamage(impact);
                     
                 }
