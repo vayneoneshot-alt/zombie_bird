@@ -19,10 +19,9 @@ private:
     StateManager& stateManager;
     sf::RenderWindow& window;
     sf::Sprite background;
-    sf::Text titleText;
     
     struct LevelButton {
-        sf::Sprite sprite;
+        sf::RectangleShape shape;
         sf::Text text;
         std::string levelFile;
     };

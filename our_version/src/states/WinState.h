@@ -7,7 +7,7 @@
 
 class WinState : public IState {
 public:
-    WinState(StateManager& sm, sf::RenderWindow& window, int finalScore);
+    WinState(StateManager& sm, sf::RenderWindow& window);
 
     void onEnter() override;
     void onExit() override;
@@ -18,10 +18,7 @@ public:
 private:
     StateManager& stateManager;
     sf::RenderWindow& window;
-    int score;
     sf::Sprite background;
-    sf::Text titleText;
-    sf::Text promptText;
 };
 
 #endif // WINSTATE_H

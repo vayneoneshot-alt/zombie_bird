@@ -47,9 +47,6 @@ private:
     PhysicsWorld physicsWorld;
     PhysicsBody groundBody;
     
-    sf::Text scoreText;
-    int score = 0;
-    
     float physicsActiveTimer = 0.0f;
     
     void checkCollisions();

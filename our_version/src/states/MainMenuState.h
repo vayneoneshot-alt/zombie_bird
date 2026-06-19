@@ -19,8 +19,6 @@ private:
     StateManager& stateManager;
     sf::RenderWindow& window;
     sf::Sprite background;
-    sf::Text titleText;
-    sf::Text promptText;
 };
 
 #endif // MAINMENUSTATE_H

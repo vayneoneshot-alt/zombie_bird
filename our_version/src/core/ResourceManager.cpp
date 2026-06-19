@@ -30,7 +30,9 @@ void ResourceManager::preloadAll() {
     loadFont("main_font", "Data/Fonts/OpenSans-Bold.ttf");
     
     // Backgrounds
-    loadTexture("bg_menu", "Data/Images/menu.jpg");
+    loadTexture("bg_menu", "Data/object/main.png");
+    loadTexture("bg_win", "Data/object/win.png");
+    loadTexture("bg_lose", "Data/object/lose.png");
     loadTexture("bg_lvl1", "Data/object/level1.png");
     loadTexture("bg_lvl2", "Data/object/level2.png");
     loadTexture("bg_lvl3", "Data/object/level3.png");
@@ -50,9 +52,9 @@ void ResourceManager::preloadAll() {
     loadTexture("btn_level3", "Data/object/level3.png");
     
     // Slingshot
-    loadTexture("slingshot", "Data/Images/slingshot.png");
+    loadTexture("slingshot", "Data/object/slingshot.png");
     
     // Blocks
-    loadTexture("block_wood_intact", "Data/Images/kenney_physicspack/PNG/Wood elements/elementWood047.png");
-    loadTexture("block_wood_cracked", "Data/Images/kenney_physicspack/PNG/Wood elements/elementWood049.png");
+    loadTexture("block_wood_intact", "Data/object/elementWood047.png");
+    loadTexture("block_wood_cracked", "Data/object/elementWood049.png");
 }

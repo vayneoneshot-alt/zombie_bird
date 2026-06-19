@@ -7,7 +7,7 @@
 
 class LoseState : public IState {
 public:
-    LoseState(StateManager& sm, sf::RenderWindow& window, int finalScore);
+    LoseState(StateManager& sm, sf::RenderWindow& window);
 
     void onEnter() override;
     void onExit() override;
@@ -18,10 +18,7 @@ public:
 private:
     StateManager& stateManager;
     sf::RenderWindow& window;
-    int score;
     sf::Sprite background;
-    sf::Text titleText;
-    sf::Text promptText;
 };
 
 #endif // LOSESTATE_H

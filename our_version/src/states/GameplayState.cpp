@@ -17,12 +17,6 @@ void GameplayState::onEnter() {
     
     slingshot = std::make_unique<Slingshot>(sf::Vector2f(250.0f, winSize.y - 200.0f), 100.0f);
     
-    scoreText.setFont(rm.getFont("main_font"));
-    scoreText.setCharacterSize(30);
-    scoreText.setFillColor(sf::Color::White);
-    scoreText.setPosition(20.0f, 20.0f);
-    scoreText.setString("Score: 0");
-    
     groundBody.position = {window.getSize().x / 2.0f, window.getSize().y - 30.0f + 100.0f}; // groundY is win.y - 30. halfHeight is 100.
     groundBody.setStatic(true);
     groundBody.friction = 0.96f;
@@ -215,21 +209,21 @@ void GameplayState::update(float dt) {
                 Pig* pig = isPigA ? static_cast<Pig*>(entA) : static_cast<Pig*>(entB);
                 if (!pig->isDead()) {
                     pig->receiveDamage(impact * 50.0f);
-                    if (pig->isDead()) score += 100;
+                    
                 }
             }
             else if ((isBirdA && isBlockB) || (isBirdB && isBlockA)) {
                 Block* block = isBlockA ? static_cast<Block*>(entA) : static_cast<Block*>(entB);
                 if (!block->isDestroyed()) {
                     block->receiveDamage(impact);
-                    if (block->isDestroyed()) score += 50;
+                    
                 }
             }
             else if ((isPigA && isBlockB) || (isPigB && isBlockA)) {
                 Pig* pig = isPigA ? static_cast<Pig*>(entA) : static_cast<Pig*>(entB);
                 if (!pig->isDead() && impact > 150.0f) {
                     pig->receiveDamage(impact);
-                    if (pig->isDead()) score += 100;
+                    
                 }
             }
         }
@@ -267,8 +261,6 @@ void GameplayState::update(float dt) {
     if (!activeBirds.empty()) {
         if (checkWinLoss()) return; // Early exit to prevent use-after-free crash
     }
-
-    scoreText.setString("Score: " + std::to_string(score));
 }
 
 void GameplayState::checkCollisions() {
@@ -284,7 +276,7 @@ void GameplayState::resolveExplosions(const ExplosiveBird* eb) {
         sf::Vector2f diff = pig->getBody().position - center;
         if (diff.x * diff.x + diff.y * diff.y < radiusSq) {
             pig->receiveDamage(eb->getExplosionForce()); // Instant kill usually
-            if (pig->isDead()) score += 100;
+            
         }
     }
     
@@ -299,7 +291,7 @@ void GameplayState::resolveExplosions(const ExplosiveBird* eb) {
                 sf::Vector2f dir = diff / dist;
                 block->getBody().applyForce(dir * eb->getExplosionForce() * (1.0f - dist/eb->getExplosionRadius()));
                 block->receiveDamage(1000.0f); // Massive damage
-                if (block->isDestroyed()) score += 50;
+                
             }
         }
     }
@@ -316,7 +308,7 @@ bool GameplayState::checkWinLoss() {
     
     if (allPigsDead) {
         std::cout << "Win! Returning to menu...\n";
-        stateManager.changeState(std::make_unique<WinState>(stateManager, window, score));
+        stateManager.changeState(std::make_unique<WinState>(stateManager, window));
         return true;
     } else {
         bool outOfBirds = birdQueue.empty();
@@ -330,7 +322,7 @@ bool GameplayState::checkWinLoss() {
         
         if (outOfBirds && allBirdsStopped) {
             std::cout << "Lose! Returning to menu...\n";
-            stateManager.changeState(std::make_unique<LoseState>(stateManager, window, score));
+            stateManager.changeState(std::make_unique<LoseState>(stateManager, window));
             return true;
         }
     }
@@ -354,6 +346,4 @@ void GameplayState::draw(sf::RenderWindow& renderWindow) {
     for (auto& bird : birdQueue) {
         bird->draw(renderWindow);
     }
-    
-    renderWindow.draw(scoreText);
 }
