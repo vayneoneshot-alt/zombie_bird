@@ -2,6 +2,7 @@
 #include "WinState.h"
 #include "LoseState.h"
 #include "../core/CollisionSystem.h"
+#include "MainMenuState.h"
 #include <iostream>
 #include <cmath>
 
@@ -23,6 +24,21 @@ void GameplayState::onEnter() {
     groundBody.restitution = 0.2f;
     groundBody.userData = nullptr;
     physicsWorld.addBody(&groundBody);
+
+    // Init Exit Button
+    exitBtnShape.setSize(sf::Vector2f(100.0f, 40.0f));
+    exitBtnShape.setPosition(20.0f, 20.0f);
+    exitBtnShape.setFillColor(sf::Color(20, 20, 20, 200));
+    exitBtnShape.setOutlineColor(sf::Color::White);
+    exitBtnShape.setOutlineThickness(2.0f);
+    
+    exitBtnText.setFont(rm.getFont("main_font"));
+    exitBtnText.setString("Exit");
+    exitBtnText.setCharacterSize(20);
+    exitBtnText.setFillColor(sf::Color::White);
+    sf::FloatRect textBounds = exitBtnText.getLocalBounds();
+    exitBtnText.setOrigin(textBounds.left + textBounds.width/2.0f, textBounds.top + textBounds.height/2.0f);
+    exitBtnText.setPosition(exitBtnShape.getPosition().x + 50.0f, exitBtnShape.getPosition().y + 20.0f);
 
     loadLevel();
 }
@@ -112,6 +128,11 @@ void GameplayState::handleEvent(const sf::Event& e) {
     if (e.type == sf::Event::MouseButtonPressed && e.mouseButton.button == sf::Mouse::Left) {
         sf::Vector2f mousePos(e.mouseButton.x, e.mouseButton.y);
         
+        if (exitBtnShape.getGlobalBounds().contains(mousePos)) {
+            stateManager.changeState(std::make_unique<MainMenuState>(stateManager, window));
+            return;
+        }
+        
         // Use bird ability if we click and a bird is already flying
         if (hasActiveFlying) {
             for (auto it = activeBirds.rbegin(); it != activeBirds.rend(); ++it) {
@@ -126,6 +147,11 @@ void GameplayState::handleEvent(const sf::Event& e) {
     }
     else if (e.type == sf::Event::MouseMoved) {
         sf::Vector2f mousePos(e.mouseMove.x, e.mouseMove.y);
+        if (exitBtnShape.getGlobalBounds().contains(mousePos)) {
+            exitBtnShape.setFillColor(sf::Color(60, 60, 60, 200));
+        } else {
+            exitBtnShape.setFillColor(sf::Color(20, 20, 20, 200));
+        }
         slingshot->onMouseMove(mousePos);
     }
     else if (e.type == sf::Event::MouseButtonReleased && e.mouseButton.button == sf::Mouse::Left) {
@@ -279,6 +305,14 @@ void GameplayState::update(float dt) {
     if (!activeBirds.empty()) {
         if (checkWinLoss()) return; // Early exit to prevent use-after-free crash
     }
+    
+    if (isWinning) {
+        winTimer -= dt;
+        if (winTimer <= 0.0f) {
+            stateManager.changeState(std::make_unique<WinState>(stateManager, window));
+            return;
+        }
+    }
 }
 
 void GameplayState::checkCollisions() {
@@ -316,6 +350,8 @@ void GameplayState::resolveExplosions(const ExplosiveBird* eb) {
 }
 
 bool GameplayState::checkWinLoss() {
+    if (isWinning) return false;
+
     bool allPigsDead = true;
     for (const auto& pig : pigs) {
         if (!pig->isDead()) {
@@ -325,9 +361,10 @@ bool GameplayState::checkWinLoss() {
     }
     
     if (allPigsDead) {
-        std::cout << "Win! Returning to menu...\n";
-        stateManager.changeState(std::make_unique<WinState>(stateManager, window));
-        return true;
+        std::cout << "Win! Starting 3 second delay...\n";
+        isWinning = true;
+        winTimer = 3.0f;
+        return false;
     } else {
         bool outOfBirds = birdQueue.empty();
         bool allBirdsStopped = true;
@@ -364,4 +401,7 @@ void GameplayState::draw(sf::RenderWindow& renderWindow) {
     for (auto& bird : birdQueue) {
         bird->draw(renderWindow);
     }
+    
+    renderWindow.draw(exitBtnShape);
+    renderWindow.draw(exitBtnText);
 }

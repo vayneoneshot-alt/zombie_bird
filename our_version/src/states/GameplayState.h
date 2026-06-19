@@ -49,6 +49,12 @@ private:
     
     float physicsActiveTimer = 0.0f;
     
+    bool isWinning = false;
+    float winTimer = 3.0f;
+    
+    sf::RectangleShape exitBtnShape;
+    sf::Text exitBtnText;
+    
     void checkCollisions();
     void resolveExplosions(const ExplosiveBird* source);
     bool checkWinLoss();
