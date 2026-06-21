@@ -23,7 +23,7 @@ std::vector<CollisionEvent> PhysicsWorld::step(float dt, int iterations) {
     
     float inv_dt = 1.0f / dt;
 
-    // 1. Integrate forces
+    // 1. Apply gravity and movement forces to change the speed of objects.
     for (auto* body : bodies) {
         if (body->isStatic) continue;
         // Gravity is handled directly in world now, not in Entity update
@@ -36,7 +36,7 @@ std::vector<CollisionEvent> PhysicsWorld::step(float dt, int iterations) {
         body->angularAcceleration = 0.0f;
     }
 
-    // 2. Broadphase & Narrowphase (Collision Detection)
+    // 2. Find out which objects are crashing into each other using the CollisionSystem.
     // We rebuild constraints each frame. For a full engine, you'd match old contacts for warm starting.
     std::vector<ContactConstraint> newContacts;
     
@@ -81,7 +81,7 @@ std::vector<CollisionEvent> PhysicsWorld::step(float dt, int iterations) {
     }
     currentContacts = newContacts;
 
-    // 3. Pre-Step (Calculate Effective Mass & Apply Warm Starting)
+    // 3. Math preparation: figure out how heavy the objects feel when they crash, and use past frame's pushes (warm starting) to keep stacks of boxes stable.
     const float allowedPenetration = 0.01f;
     const float baumgarte = 0.2f;
 
@@ -121,7 +121,7 @@ std::vector<CollisionEvent> PhysicsWorld::step(float dt, int iterations) {
         }
     }
 
-    // 4. Iterative Solver
+    // 4. The main physics loop: repeatedly push colliding objects apart and apply bounce/friction until nothing is overlapping.
     for (int iter = 0; iter < iterations; ++iter) {
         for (auto& c : currentContacts) {
             sf::Vector2f vA = c.a->velocity + sf::Vector2f(-c.a->angularVelocity * c.rA.y, c.a->angularVelocity * c.rA.x);
@@ -182,7 +182,7 @@ std::vector<CollisionEvent> PhysicsWorld::step(float dt, int iterations) {
         }
     }
 
-    // Generate Collision Events for Gameplay
+    // Check how hard they hit to tell the game if a pig should take damage or a sound should play.
     for (const auto& c : currentContacts) {
         if (c.normalImpulse > 0.0f) {
             CollisionEvent ev;
@@ -193,7 +193,7 @@ std::vector<CollisionEvent> PhysicsWorld::step(float dt, int iterations) {
         }
     }
 
-    // 5. Integrate Velocities
+    // 5. Finally, move the objects to their new positions based on their updated speeds.
     for (auto* body : bodies) {
         if (body->isStatic) continue;
         body->position += body->velocity * dt;
