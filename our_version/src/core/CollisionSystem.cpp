@@ -7,17 +7,19 @@
 #include <algorithm>
 #include <limits>
 
-// Helper math
+// Helper math to rotate a 2D vector by a given angle. Used to change coordinate spaces (e.g., making a tilted box straight).
 inline sf::Vector2f rotateVec(sf::Vector2f v, float angle) {
     float c = std::cos(angle);
     float s = std::sin(angle);
     return sf::Vector2f(v.x * c - v.y * s, v.x * s + v.y * c);
 }
 
+// Helper math to calculate the dot product of two vectors (how much they point in the same direction).
 inline float dotProduct(sf::Vector2f a, sf::Vector2f b) {
     return a.x * b.x + a.y * b.y;
 }
 
+// Checks if two circles hit by checking if the distance between their centers is less than their combined radius.
 CollisionManifold CollisionSystem::circleVsCircle(const PhysicsBody* a, float radiusA, 
                                                   const PhysicsBody* b, float radiusB) {
     CollisionManifold m;
@@ -38,6 +40,7 @@ CollisionManifold CollisionSystem::circleVsCircle(const PhysicsBody* a, float ra
     return m;
 }
 
+// Checks if a circle hits a rotated box. It works by temporarily rotating the circle to treat the box as if it were standing straight up, which makes the math much simpler.
 CollisionManifold CollisionSystem::circleVsOBB(const PhysicsBody* circle, float radius, 
                                                const PhysicsBody* box, sf::Vector2f boxHalfSize) {
     CollisionManifold m;
@@ -88,7 +91,7 @@ CollisionManifold CollisionSystem::circleVsOBB(const PhysicsBody* circle, float 
     return m;
 }
 
-// OBB vs OBB SAT with face clipping
+// Checks if two rotated boxes hit using the Separating Axis Theorem. It looks at the boxes from 4 different angles (axes) to see if their "shadows" overlap. If they overlap on all 4 angles, they are colliding.
 CollisionManifold CollisionSystem::obbVsOBB(const PhysicsBody* a, sf::Vector2f halfSizeA, 
                                             const PhysicsBody* b, sf::Vector2f halfSizeB) {
     CollisionManifold m;
@@ -205,6 +208,7 @@ CollisionManifold CollisionSystem::obbVsOBB(const PhysicsBody* a, sf::Vector2f h
     return m;
 }
 
+// The main sorting function. It checks the type of each object (Bird, Pig, Block) to figure out if it's a circle or a box, and then runs the correct math formula above.
 CollisionManifold CollisionSystem::detectCollision(PhysicsBody* a, PhysicsBody* b) {
     
     Entity* entA = static_cast<Entity*>(a->userData);
