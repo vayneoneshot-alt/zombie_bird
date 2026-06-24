@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named HappyBird
+# Target rules for targets named ZombieBirds
 
 # Build rule for target.
-HappyBird: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 HappyBird
-.PHONY : HappyBird
+ZombieBirds: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ZombieBirds
+.PHONY : ZombieBirds
 
 # fast build rule for target.
-HappyBird/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/build
-.PHONY : HappyBird/fast
+ZombieBirds/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/build
+.PHONY : ZombieBirds/fast
 
 src/core/CollisionSystem.obj: src/core/CollisionSystem.cpp.obj
 .PHONY : src/core/CollisionSystem.obj
 
 # target to build an object file
 src/core/CollisionSystem.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/core/CollisionSystem.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/core/CollisionSystem.cpp.obj
 .PHONY : src/core/CollisionSystem.cpp.obj
 
 src/core/CollisionSystem.i: src/core/CollisionSystem.cpp.i
@@ -141,7 +141,7 @@ src/core/CollisionSystem.i: src/core/CollisionSystem.cpp.i
 
 # target to preprocess a source file
 src/core/CollisionSystem.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/core/CollisionSystem.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/core/CollisionSystem.cpp.i
 .PHONY : src/core/CollisionSystem.cpp.i
 
 src/core/CollisionSystem.s: src/core/CollisionSystem.cpp.s
@@ -149,7 +149,7 @@ src/core/CollisionSystem.s: src/core/CollisionSystem.cpp.s
 
 # target to generate assembly for a file
 src/core/CollisionSystem.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/core/CollisionSystem.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/core/CollisionSystem.cpp.s
 .PHONY : src/core/CollisionSystem.cpp.s
 
 src/core/PhysicsWorld.obj: src/core/PhysicsWorld.cpp.obj
@@ -157,7 +157,7 @@ src/core/PhysicsWorld.obj: src/core/PhysicsWorld.cpp.obj
 
 # target to build an object file
 src/core/PhysicsWorld.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/core/PhysicsWorld.cpp.obj
 .PHONY : src/core/PhysicsWorld.cpp.obj
 
 src/core/PhysicsWorld.i: src/core/PhysicsWorld.cpp.i
@@ -165,7 +165,7 @@ src/core/PhysicsWorld.i: src/core/PhysicsWorld.cpp.i
 
 # target to preprocess a source file
 src/core/PhysicsWorld.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/core/PhysicsWorld.cpp.i
 .PHONY : src/core/PhysicsWorld.cpp.i
 
 src/core/PhysicsWorld.s: src/core/PhysicsWorld.cpp.s
@@ -173,7 +173,7 @@ src/core/PhysicsWorld.s: src/core/PhysicsWorld.cpp.s
 
 # target to generate assembly for a file
 src/core/PhysicsWorld.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/core/PhysicsWorld.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/core/PhysicsWorld.cpp.s
 .PHONY : src/core/PhysicsWorld.cpp.s
 
 src/core/ResourceManager.obj: src/core/ResourceManager.cpp.obj
@@ -181,7 +181,7 @@ src/core/ResourceManager.obj: src/core/ResourceManager.cpp.obj
 
 # target to build an object file
 src/core/ResourceManager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/core/ResourceManager.cpp.obj
 .PHONY : src/core/ResourceManager.cpp.obj
 
 src/core/ResourceManager.i: src/core/ResourceManager.cpp.i
@@ -189,7 +189,7 @@ src/core/ResourceManager.i: src/core/ResourceManager.cpp.i
 
 # target to preprocess a source file
 src/core/ResourceManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/core/ResourceManager.cpp.i
 .PHONY : src/core/ResourceManager.cpp.i
 
 src/core/ResourceManager.s: src/core/ResourceManager.cpp.s
@@ -197,7 +197,7 @@ src/core/ResourceManager.s: src/core/ResourceManager.cpp.s
 
 # target to generate assembly for a file
 src/core/ResourceManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/core/ResourceManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/core/ResourceManager.cpp.s
 .PHONY : src/core/ResourceManager.cpp.s
 
 src/entities/Block.obj: src/entities/Block.cpp.obj
@@ -205,7 +205,7 @@ src/entities/Block.obj: src/entities/Block.cpp.obj
 
 # target to build an object file
 src/entities/Block.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/Block.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/Block.cpp.obj
 .PHONY : src/entities/Block.cpp.obj
 
 src/entities/Block.i: src/entities/Block.cpp.i
@@ -213,7 +213,7 @@ src/entities/Block.i: src/entities/Block.cpp.i
 
 # target to preprocess a source file
 src/entities/Block.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/Block.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/Block.cpp.i
 .PHONY : src/entities/Block.cpp.i
 
 src/entities/Block.s: src/entities/Block.cpp.s
@@ -221,7 +221,7 @@ src/entities/Block.s: src/entities/Block.cpp.s
 
 # target to generate assembly for a file
 src/entities/Block.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/Block.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/Block.cpp.s
 .PHONY : src/entities/Block.cpp.s
 
 src/entities/Pig.obj: src/entities/Pig.cpp.obj
@@ -229,7 +229,7 @@ src/entities/Pig.obj: src/entities/Pig.cpp.obj
 
 # target to build an object file
 src/entities/Pig.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/Pig.cpp.obj
 .PHONY : src/entities/Pig.cpp.obj
 
 src/entities/Pig.i: src/entities/Pig.cpp.i
@@ -237,7 +237,7 @@ src/entities/Pig.i: src/entities/Pig.cpp.i
 
 # target to preprocess a source file
 src/entities/Pig.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/Pig.cpp.i
 .PHONY : src/entities/Pig.cpp.i
 
 src/entities/Pig.s: src/entities/Pig.cpp.s
@@ -245,7 +245,7 @@ src/entities/Pig.s: src/entities/Pig.cpp.s
 
 # target to generate assembly for a file
 src/entities/Pig.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/Pig.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/Pig.cpp.s
 .PHONY : src/entities/Pig.cpp.s
 
 src/entities/birds/BasicBird.obj: src/entities/birds/BasicBird.cpp.obj
@@ -253,7 +253,7 @@ src/entities/birds/BasicBird.obj: src/entities/birds/BasicBird.cpp.obj
 
 # target to build an object file
 src/entities/birds/BasicBird.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/birds/BasicBird.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/birds/BasicBird.cpp.obj
 .PHONY : src/entities/birds/BasicBird.cpp.obj
 
 src/entities/birds/BasicBird.i: src/entities/birds/BasicBird.cpp.i
@@ -261,7 +261,7 @@ src/entities/birds/BasicBird.i: src/entities/birds/BasicBird.cpp.i
 
 # target to preprocess a source file
 src/entities/birds/BasicBird.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/birds/BasicBird.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/birds/BasicBird.cpp.i
 .PHONY : src/entities/birds/BasicBird.cpp.i
 
 src/entities/birds/BasicBird.s: src/entities/birds/BasicBird.cpp.s
@@ -269,7 +269,7 @@ src/entities/birds/BasicBird.s: src/entities/birds/BasicBird.cpp.s
 
 # target to generate assembly for a file
 src/entities/birds/BasicBird.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/birds/BasicBird.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/birds/BasicBird.cpp.s
 .PHONY : src/entities/birds/BasicBird.cpp.s
 
 src/entities/birds/Bird.obj: src/entities/birds/Bird.cpp.obj
@@ -277,7 +277,7 @@ src/entities/birds/Bird.obj: src/entities/birds/Bird.cpp.obj
 
 # target to build an object file
 src/entities/birds/Bird.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/birds/Bird.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/birds/Bird.cpp.obj
 .PHONY : src/entities/birds/Bird.cpp.obj
 
 src/entities/birds/Bird.i: src/entities/birds/Bird.cpp.i
@@ -285,7 +285,7 @@ src/entities/birds/Bird.i: src/entities/birds/Bird.cpp.i
 
 # target to preprocess a source file
 src/entities/birds/Bird.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/birds/Bird.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/birds/Bird.cpp.i
 .PHONY : src/entities/birds/Bird.cpp.i
 
 src/entities/birds/Bird.s: src/entities/birds/Bird.cpp.s
@@ -293,7 +293,7 @@ src/entities/birds/Bird.s: src/entities/birds/Bird.cpp.s
 
 # target to generate assembly for a file
 src/entities/birds/Bird.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/birds/Bird.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/birds/Bird.cpp.s
 .PHONY : src/entities/birds/Bird.cpp.s
 
 src/entities/birds/DashBird.obj: src/entities/birds/DashBird.cpp.obj
@@ -301,7 +301,7 @@ src/entities/birds/DashBird.obj: src/entities/birds/DashBird.cpp.obj
 
 # target to build an object file
 src/entities/birds/DashBird.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/birds/DashBird.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/birds/DashBird.cpp.obj
 .PHONY : src/entities/birds/DashBird.cpp.obj
 
 src/entities/birds/DashBird.i: src/entities/birds/DashBird.cpp.i
@@ -309,7 +309,7 @@ src/entities/birds/DashBird.i: src/entities/birds/DashBird.cpp.i
 
 # target to preprocess a source file
 src/entities/birds/DashBird.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/birds/DashBird.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/birds/DashBird.cpp.i
 .PHONY : src/entities/birds/DashBird.cpp.i
 
 src/entities/birds/DashBird.s: src/entities/birds/DashBird.cpp.s
@@ -317,7 +317,7 @@ src/entities/birds/DashBird.s: src/entities/birds/DashBird.cpp.s
 
 # target to generate assembly for a file
 src/entities/birds/DashBird.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/birds/DashBird.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/birds/DashBird.cpp.s
 .PHONY : src/entities/birds/DashBird.cpp.s
 
 src/entities/birds/ExplosiveBird.obj: src/entities/birds/ExplosiveBird.cpp.obj
@@ -325,7 +325,7 @@ src/entities/birds/ExplosiveBird.obj: src/entities/birds/ExplosiveBird.cpp.obj
 
 # target to build an object file
 src/entities/birds/ExplosiveBird.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/birds/ExplosiveBird.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/birds/ExplosiveBird.cpp.obj
 .PHONY : src/entities/birds/ExplosiveBird.cpp.obj
 
 src/entities/birds/ExplosiveBird.i: src/entities/birds/ExplosiveBird.cpp.i
@@ -333,7 +333,7 @@ src/entities/birds/ExplosiveBird.i: src/entities/birds/ExplosiveBird.cpp.i
 
 # target to preprocess a source file
 src/entities/birds/ExplosiveBird.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/birds/ExplosiveBird.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/birds/ExplosiveBird.cpp.i
 .PHONY : src/entities/birds/ExplosiveBird.cpp.i
 
 src/entities/birds/ExplosiveBird.s: src/entities/birds/ExplosiveBird.cpp.s
@@ -341,7 +341,7 @@ src/entities/birds/ExplosiveBird.s: src/entities/birds/ExplosiveBird.cpp.s
 
 # target to generate assembly for a file
 src/entities/birds/ExplosiveBird.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/birds/ExplosiveBird.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/birds/ExplosiveBird.cpp.s
 .PHONY : src/entities/birds/ExplosiveBird.cpp.s
 
 src/entities/birds/SplitBird.obj: src/entities/birds/SplitBird.cpp.obj
@@ -349,7 +349,7 @@ src/entities/birds/SplitBird.obj: src/entities/birds/SplitBird.cpp.obj
 
 # target to build an object file
 src/entities/birds/SplitBird.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/birds/SplitBird.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/birds/SplitBird.cpp.obj
 .PHONY : src/entities/birds/SplitBird.cpp.obj
 
 src/entities/birds/SplitBird.i: src/entities/birds/SplitBird.cpp.i
@@ -357,7 +357,7 @@ src/entities/birds/SplitBird.i: src/entities/birds/SplitBird.cpp.i
 
 # target to preprocess a source file
 src/entities/birds/SplitBird.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/birds/SplitBird.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/birds/SplitBird.cpp.i
 .PHONY : src/entities/birds/SplitBird.cpp.i
 
 src/entities/birds/SplitBird.s: src/entities/birds/SplitBird.cpp.s
@@ -365,7 +365,7 @@ src/entities/birds/SplitBird.s: src/entities/birds/SplitBird.cpp.s
 
 # target to generate assembly for a file
 src/entities/birds/SplitBird.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/entities/birds/SplitBird.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/entities/birds/SplitBird.cpp.s
 .PHONY : src/entities/birds/SplitBird.cpp.s
 
 src/level/LevelLoader.obj: src/level/LevelLoader.cpp.obj
@@ -373,7 +373,7 @@ src/level/LevelLoader.obj: src/level/LevelLoader.cpp.obj
 
 # target to build an object file
 src/level/LevelLoader.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/level/LevelLoader.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/level/LevelLoader.cpp.obj
 .PHONY : src/level/LevelLoader.cpp.obj
 
 src/level/LevelLoader.i: src/level/LevelLoader.cpp.i
@@ -381,7 +381,7 @@ src/level/LevelLoader.i: src/level/LevelLoader.cpp.i
 
 # target to preprocess a source file
 src/level/LevelLoader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/level/LevelLoader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/level/LevelLoader.cpp.i
 .PHONY : src/level/LevelLoader.cpp.i
 
 src/level/LevelLoader.s: src/level/LevelLoader.cpp.s
@@ -389,7 +389,7 @@ src/level/LevelLoader.s: src/level/LevelLoader.cpp.s
 
 # target to generate assembly for a file
 src/level/LevelLoader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/level/LevelLoader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/level/LevelLoader.cpp.s
 .PHONY : src/level/LevelLoader.cpp.s
 
 src/main.obj: src/main.cpp.obj
@@ -397,7 +397,7 @@ src/main.obj: src/main.cpp.obj
 
 # target to build an object file
 src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/main.cpp.obj
 .PHONY : src/main.cpp.obj
 
 src/main.i: src/main.cpp.i
@@ -405,7 +405,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -413,7 +413,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/states/GameplayState.obj: src/states/GameplayState.cpp.obj
@@ -421,7 +421,7 @@ src/states/GameplayState.obj: src/states/GameplayState.cpp.obj
 
 # target to build an object file
 src/states/GameplayState.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/GameplayState.cpp.obj
 .PHONY : src/states/GameplayState.cpp.obj
 
 src/states/GameplayState.i: src/states/GameplayState.cpp.i
@@ -429,7 +429,7 @@ src/states/GameplayState.i: src/states/GameplayState.cpp.i
 
 # target to preprocess a source file
 src/states/GameplayState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/GameplayState.cpp.i
 .PHONY : src/states/GameplayState.cpp.i
 
 src/states/GameplayState.s: src/states/GameplayState.cpp.s
@@ -437,7 +437,7 @@ src/states/GameplayState.s: src/states/GameplayState.cpp.s
 
 # target to generate assembly for a file
 src/states/GameplayState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/GameplayState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/GameplayState.cpp.s
 .PHONY : src/states/GameplayState.cpp.s
 
 src/states/LevelSelectState.obj: src/states/LevelSelectState.cpp.obj
@@ -445,7 +445,7 @@ src/states/LevelSelectState.obj: src/states/LevelSelectState.cpp.obj
 
 # target to build an object file
 src/states/LevelSelectState.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/LevelSelectState.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/LevelSelectState.cpp.obj
 .PHONY : src/states/LevelSelectState.cpp.obj
 
 src/states/LevelSelectState.i: src/states/LevelSelectState.cpp.i
@@ -453,7 +453,7 @@ src/states/LevelSelectState.i: src/states/LevelSelectState.cpp.i
 
 # target to preprocess a source file
 src/states/LevelSelectState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/LevelSelectState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/LevelSelectState.cpp.i
 .PHONY : src/states/LevelSelectState.cpp.i
 
 src/states/LevelSelectState.s: src/states/LevelSelectState.cpp.s
@@ -461,7 +461,7 @@ src/states/LevelSelectState.s: src/states/LevelSelectState.cpp.s
 
 # target to generate assembly for a file
 src/states/LevelSelectState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/LevelSelectState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/LevelSelectState.cpp.s
 .PHONY : src/states/LevelSelectState.cpp.s
 
 src/states/LoseState.obj: src/states/LoseState.cpp.obj
@@ -469,7 +469,7 @@ src/states/LoseState.obj: src/states/LoseState.cpp.obj
 
 # target to build an object file
 src/states/LoseState.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/LoseState.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/LoseState.cpp.obj
 .PHONY : src/states/LoseState.cpp.obj
 
 src/states/LoseState.i: src/states/LoseState.cpp.i
@@ -477,7 +477,7 @@ src/states/LoseState.i: src/states/LoseState.cpp.i
 
 # target to preprocess a source file
 src/states/LoseState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/LoseState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/LoseState.cpp.i
 .PHONY : src/states/LoseState.cpp.i
 
 src/states/LoseState.s: src/states/LoseState.cpp.s
@@ -485,7 +485,7 @@ src/states/LoseState.s: src/states/LoseState.cpp.s
 
 # target to generate assembly for a file
 src/states/LoseState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/LoseState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/LoseState.cpp.s
 .PHONY : src/states/LoseState.cpp.s
 
 src/states/MainMenuState.obj: src/states/MainMenuState.cpp.obj
@@ -493,7 +493,7 @@ src/states/MainMenuState.obj: src/states/MainMenuState.cpp.obj
 
 # target to build an object file
 src/states/MainMenuState.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/MainMenuState.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/MainMenuState.cpp.obj
 .PHONY : src/states/MainMenuState.cpp.obj
 
 src/states/MainMenuState.i: src/states/MainMenuState.cpp.i
@@ -501,7 +501,7 @@ src/states/MainMenuState.i: src/states/MainMenuState.cpp.i
 
 # target to preprocess a source file
 src/states/MainMenuState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/MainMenuState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/MainMenuState.cpp.i
 .PHONY : src/states/MainMenuState.cpp.i
 
 src/states/MainMenuState.s: src/states/MainMenuState.cpp.s
@@ -509,7 +509,7 @@ src/states/MainMenuState.s: src/states/MainMenuState.cpp.s
 
 # target to generate assembly for a file
 src/states/MainMenuState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/MainMenuState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/MainMenuState.cpp.s
 .PHONY : src/states/MainMenuState.cpp.s
 
 src/states/StateManager.obj: src/states/StateManager.cpp.obj
@@ -517,7 +517,7 @@ src/states/StateManager.obj: src/states/StateManager.cpp.obj
 
 # target to build an object file
 src/states/StateManager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/StateManager.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/StateManager.cpp.obj
 .PHONY : src/states/StateManager.cpp.obj
 
 src/states/StateManager.i: src/states/StateManager.cpp.i
@@ -525,7 +525,7 @@ src/states/StateManager.i: src/states/StateManager.cpp.i
 
 # target to preprocess a source file
 src/states/StateManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/StateManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/StateManager.cpp.i
 .PHONY : src/states/StateManager.cpp.i
 
 src/states/StateManager.s: src/states/StateManager.cpp.s
@@ -533,7 +533,7 @@ src/states/StateManager.s: src/states/StateManager.cpp.s
 
 # target to generate assembly for a file
 src/states/StateManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/StateManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/StateManager.cpp.s
 .PHONY : src/states/StateManager.cpp.s
 
 src/states/WinState.obj: src/states/WinState.cpp.obj
@@ -541,7 +541,7 @@ src/states/WinState.obj: src/states/WinState.cpp.obj
 
 # target to build an object file
 src/states/WinState.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/WinState.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/WinState.cpp.obj
 .PHONY : src/states/WinState.cpp.obj
 
 src/states/WinState.i: src/states/WinState.cpp.i
@@ -549,7 +549,7 @@ src/states/WinState.i: src/states/WinState.cpp.i
 
 # target to preprocess a source file
 src/states/WinState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/WinState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/WinState.cpp.i
 .PHONY : src/states/WinState.cpp.i
 
 src/states/WinState.s: src/states/WinState.cpp.s
@@ -557,7 +557,7 @@ src/states/WinState.s: src/states/WinState.cpp.s
 
 # target to generate assembly for a file
 src/states/WinState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/states/WinState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/states/WinState.cpp.s
 .PHONY : src/states/WinState.cpp.s
 
 src/ui/Slingshot.obj: src/ui/Slingshot.cpp.obj
@@ -565,7 +565,7 @@ src/ui/Slingshot.obj: src/ui/Slingshot.cpp.obj
 
 # target to build an object file
 src/ui/Slingshot.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/ui/Slingshot.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/ui/Slingshot.cpp.obj
 .PHONY : src/ui/Slingshot.cpp.obj
 
 src/ui/Slingshot.i: src/ui/Slingshot.cpp.i
@@ -573,7 +573,7 @@ src/ui/Slingshot.i: src/ui/Slingshot.cpp.i
 
 # target to preprocess a source file
 src/ui/Slingshot.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/ui/Slingshot.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/ui/Slingshot.cpp.i
 .PHONY : src/ui/Slingshot.cpp.i
 
 src/ui/Slingshot.s: src/ui/Slingshot.cpp.s
@@ -581,7 +581,7 @@ src/ui/Slingshot.s: src/ui/Slingshot.cpp.s
 
 # target to generate assembly for a file
 src/ui/Slingshot.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/ui/Slingshot.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/ui/Slingshot.cpp.s
 .PHONY : src/ui/Slingshot.cpp.s
 
 src/ui/TrajectoryLine.obj: src/ui/TrajectoryLine.cpp.obj
@@ -589,7 +589,7 @@ src/ui/TrajectoryLine.obj: src/ui/TrajectoryLine.cpp.obj
 
 # target to build an object file
 src/ui/TrajectoryLine.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/ui/TrajectoryLine.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/ui/TrajectoryLine.cpp.obj
 .PHONY : src/ui/TrajectoryLine.cpp.obj
 
 src/ui/TrajectoryLine.i: src/ui/TrajectoryLine.cpp.i
@@ -597,7 +597,7 @@ src/ui/TrajectoryLine.i: src/ui/TrajectoryLine.cpp.i
 
 # target to preprocess a source file
 src/ui/TrajectoryLine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/ui/TrajectoryLine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/ui/TrajectoryLine.cpp.i
 .PHONY : src/ui/TrajectoryLine.cpp.i
 
 src/ui/TrajectoryLine.s: src/ui/TrajectoryLine.cpp.s
@@ -605,7 +605,7 @@ src/ui/TrajectoryLine.s: src/ui/TrajectoryLine.cpp.s
 
 # target to generate assembly for a file
 src/ui/TrajectoryLine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HappyBird.dir\build.make CMakeFiles/HappyBird.dir/src/ui/TrajectoryLine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZombieBirds.dir\build.make CMakeFiles/ZombieBirds.dir/src/ui/TrajectoryLine.cpp.s
 .PHONY : src/ui/TrajectoryLine.cpp.s
 
 # Help Target
@@ -616,7 +616,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... HappyBird
+	@echo ... ZombieBirds
 	@echo ... src/core/CollisionSystem.obj
 	@echo ... src/core/CollisionSystem.i
 	@echo ... src/core/CollisionSystem.s
