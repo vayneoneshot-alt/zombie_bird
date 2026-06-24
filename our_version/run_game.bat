@@ -1,6 +1,6 @@
 @echo off
 echo ========================================================
-echo Happy Bird - Auto Build ^& Run Script (MSYS2 / UCRT64)
+echo ZombieBirds - Auto Build ^& Run Script (MSYS2 / UCRT64)
 echo ========================================================
 
 :: Check if MSYS2 is installed in the default location
@@ -39,7 +39,7 @@ if %ERRORLEVEL% neq 0 (
 )
 
 echo.
-echo [3/3] Build Successful! Launching Happy Bird...
+echo [3/3] Build Successful! Launching ZombieBirds...
 echo ========================================================
 cd ..
-start build\HappyBird.exe
+start build\ZombieBirds.exe

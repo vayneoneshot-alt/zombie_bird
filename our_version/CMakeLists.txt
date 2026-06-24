@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(HappyBird)
+project(ZombieBirds)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -15,7 +15,7 @@ file(GLOB_RECURSE SOURCES "src/*.cpp")
 list(APPEND SOURCES "src/core/PhysicsWorld.cpp")
 
 # Create executable
-add_executable(HappyBird ${SOURCES})
+add_executable(ZombieBirds ${SOURCES})
 
 # Link SFML libraries
-target_link_libraries(HappyBird PRIVATE sfml-graphics sfml-window sfml-system)
+target_link_libraries(ZombieBirds PRIVATE sfml-graphics sfml-window sfml-system)
