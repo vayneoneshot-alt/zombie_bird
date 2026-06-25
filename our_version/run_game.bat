@@ -42,4 +42,4 @@ echo.
 echo [3/3] Build Successful! Launching ZombieBirds...
 echo ========================================================
 cd ..
-start build\ZombieBirds.exe
+start ZombieBirds.exe

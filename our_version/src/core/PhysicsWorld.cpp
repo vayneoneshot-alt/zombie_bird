@@ -88,7 +88,7 @@ std::vector<CollisionEvent> PhysicsWorld::step(float dt, int iterations) {
     for (auto& c : currentContacts) {
         c.rA = c.contactPoint - c.a->position;
         c.rB = c.contactPoint - c.b->position;
-        
+// Effective Mass        
         float rnA = c.rA.x * c.normal.y - c.rA.y * c.normal.x; // crossProduct(rA, normal)
         float rnB = c.rB.x * c.normal.y - c.rB.y * c.normal.x; // crossProduct(rB, normal)
         
@@ -127,8 +127,8 @@ std::vector<CollisionEvent> PhysicsWorld::step(float dt, int iterations) {
             sf::Vector2f vA = c.a->velocity + sf::Vector2f(-c.a->angularVelocity * c.rA.y, c.a->angularVelocity * c.rA.x);
             sf::Vector2f vB = c.b->velocity + sf::Vector2f(-c.b->angularVelocity * c.rB.y, c.b->angularVelocity * c.rB.x);
             sf::Vector2f rv = vB - vA;
-            
-            // Solve Normal Constraint
+//Relative Velocity            
+//Impulse Magnitude            // Solve Normal Constraint
             float vn = rv.x * c.normal.x + rv.y * c.normal.y;
             // Include restitution (bounciness) if velocity is high enough
             float restitution = std::min(c.a->restitution, c.b->restitution);

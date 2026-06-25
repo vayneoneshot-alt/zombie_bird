@@ -15,7 +15,7 @@ Zombie Bird is a fun, physics-based puzzle game where you launch heroic birds fr
 
 ## Installation / Running
 
-Just download the repository and double-click `HappyBird.exe` to play. 
+Just download the repository and double-click `ZombieBirds.exe` to play. 
 (Note: Make sure the `Data/` folder is in the same directory as the executable so the game can load its assets and levels).
 
 ## Controls

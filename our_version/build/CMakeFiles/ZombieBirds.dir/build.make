@@ -397,38 +397,38 @@ ZombieBirds_OBJECTS = \
 # External object files for target ZombieBirds
 ZombieBirds_EXTERNAL_OBJECTS =
 
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/core/CollisionSystem.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/core/PhysicsWorld.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/core/ResourceManager.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/entities/Block.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/entities/Pig.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/entities/birds/BasicBird.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/entities/birds/Bird.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/entities/birds/DashBird.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/entities/birds/ExplosiveBird.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/entities/birds/SplitBird.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/level/LevelLoader.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/main.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/states/GameplayState.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/states/LevelSelectState.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/states/LoseState.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/states/MainMenuState.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/states/StateManager.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/states/WinState.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/ui/Slingshot.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/ui/TrajectoryLine.cpp.obj
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/build.make
-ZombieBirds.exe: C:/msys64/ucrt64/lib/libsfml-graphics.dll.a
-ZombieBirds.exe: C:/msys64/ucrt64/lib/libsfml-window.dll.a
-ZombieBirds.exe: C:/msys64/ucrt64/lib/libsfml-system.dll.a
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/linkLibs.rsp
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/objects1.rsp
-ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable ZombieBirds.exe"
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/core/CollisionSystem.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/core/PhysicsWorld.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/core/ResourceManager.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/entities/Block.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/entities/Pig.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/entities/birds/BasicBird.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/entities/birds/Bird.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/entities/birds/DashBird.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/entities/birds/ExplosiveBird.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/entities/birds/SplitBird.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/level/LevelLoader.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/main.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/states/GameplayState.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/states/LevelSelectState.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/states/LoseState.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/states/MainMenuState.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/states/StateManager.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/states/WinState.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/ui/Slingshot.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/src/ui/TrajectoryLine.cpp.obj
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/build.make
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: C:/msys64/ucrt64/lib/libsfml-graphics.dll.a
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: C:/msys64/ucrt64/lib/libsfml-window.dll.a
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: C:/msys64/ucrt64/lib/libsfml-system.dll.a
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/linkLibs.rsp
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/objects1.rsp
+C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe: CMakeFiles/ZombieBirds.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\hoctap\C++\zombie_bird\our_version\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable C:\hoctap\C++\zombie_bird\our_version\ZombieBirds.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ZombieBirds.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/ZombieBirds.dir/build: ZombieBirds.exe
+CMakeFiles/ZombieBirds.dir/build: C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe
 .PHONY : CMakeFiles/ZombieBirds.dir/build
 
 CMakeFiles/ZombieBirds.dir/clean:

@@ -1,4 +1,7 @@
 file(REMOVE_RECURSE
+  "C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe"
+  "C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.exe.manifest"
+  "C:/hoctap/C++/zombie_bird/our_version/ZombieBirds.pdb"
   "CMakeFiles/ZombieBirds.dir/src/core/CollisionSystem.cpp.obj"
   "CMakeFiles/ZombieBirds.dir/src/core/CollisionSystem.cpp.obj.d"
   "CMakeFiles/ZombieBirds.dir/src/core/PhysicsWorld.cpp.obj"
@@ -39,9 +42,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ZombieBirds.dir/src/ui/Slingshot.cpp.obj.d"
   "CMakeFiles/ZombieBirds.dir/src/ui/TrajectoryLine.cpp.obj"
   "CMakeFiles/ZombieBirds.dir/src/ui/TrajectoryLine.cpp.obj.d"
-  "ZombieBirds.exe"
-  "ZombieBirds.exe.manifest"
-  "ZombieBirds.pdb"
   "libZombieBirds.dll.a"
 )
 

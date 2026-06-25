@@ -6,7 +6,7 @@
 
 int main() {
     // Create window
-    sf::RenderWindow window(sf::VideoMode(1080, 720), "Happy Bird", sf::Style::Titlebar | sf::Style::Close);
+    sf::RenderWindow window(sf::VideoMode(1080, 720), "ZombieBirds", sf::Style::Titlebar | sf::Style::Close);
     window.setFramerateLimit(60);
 
     // Load resources

@@ -14,6 +14,9 @@ include_directories(src)
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 list(APPEND SOURCES "src/core/PhysicsWorld.cpp")
 
+# Set output directory to source directory
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+
 # Create executable
 add_executable(ZombieBirds ${SOURCES})
 
